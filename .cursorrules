@@ -1,0 +1,138 @@
+# Cursor Rules — Rayleigh Nails Spa
+
+## Project Overview
+Static multi-page website for Rayleigh Nails Spa. Pure HTML, Tailwind CSS, and vanilla JavaScript. No frameworks, no build tools beyond Tailwind CDN.
+
+## Tech Stack
+- HTML5
+- Tailwind CSS (via CDN)
+- Vanilla JavaScript
+- No React, no Vue, no jQuery
+
+## Colour Palette
+Always use these exact values:
+- Background: #0a0a0a
+- Secondary background / cards: #111111
+- Gold accent: #c9a84c
+- Gold hover: #b8973b
+- White text: #ffffff
+- Secondary text: #e0e0e0
+- Border: #222222
+
+In Tailwind, use arbitrary values where needed: `bg-[#0a0a0a]`, `text-[#c9a84c]`, `border-[#222222]`
+
+## Typography
+- Font: Google Fonts — Cormorant Garamond for headings (elegant, luxury feel), Inter for body text
+- Headings: font-light tracking-widest uppercase for main headings
+- Body: font-light leading-relaxed
+- Always import both fonts in every HTML file
+
+## File Structure
+
+## Additional rules
+You are an expert developer in HTML and CSS, focusing on best practices, accessibility, and responsive design.
+
+    Key Principles
+    - Write semantic HTML to improve accessibility and SEO.
+    - Use CSS for styling, avoiding inline styles.
+    - Ensure responsive design using media queries and flexible layouts.
+    - Prioritize accessibility by using ARIA roles and attributes.
+
+    HTML
+    - Use semantic elements (e.g., <header>, <main>, <footer>, <article>, <section>).
+    - Use <button> for clickable elements, not <div> or <span>.
+    - Use <a> for links, ensuring href attribute is present.
+    - Use <img> with alt attribute for images.
+    - Use <form> for forms, with appropriate input types and labels.
+    - Avoid using deprecated elements (e.g., <font>, <center>).
+
+    CSS
+    - Use external stylesheets for CSS.
+    - Use class selectors over ID selectors for styling.
+    - Use Flexbox and Grid for layout.
+    - Use rem and em units for scalable and accessible typography.
+    - Use CSS variables for consistent theming.
+    - Use BEM (Block Element Modifier) methodology for naming classes.
+    - Avoid !important; use specificity to manage styles.
+
+    Responsive Design
+    - Use media queries to create responsive layouts.
+    - Use mobile-first approach for media queries.
+    - Ensure touch targets are large enough for touch devices.
+    - Use responsive images with srcset and sizes attributes.
+    - Use viewport meta tag for responsive scaling.
+
+    Accessibility
+    - Use ARIA roles and attributes to enhance accessibility.
+    - Ensure sufficient color contrast for text.
+    - Provide keyboard navigation for interactive elements.
+    - Use focus styles to indicate focus state.
+    - Use landmarks (e.g., <nav>, <main>, <aside>) for screen readers.
+
+    Performance
+    - Minimize CSS and HTML file sizes.
+    - Use CSS minification and compression.
+    - Avoid excessive use of animations and transitions.
+    - Use lazy loading for images and other media.
+
+    Testing
+    - Test HTML and CSS in multiple browsers and devices.
+    - Use tools like Lighthouse for performance and accessibility audits.
+    - Validate HTML and CSS using W3C validators.
+
+    Documentation
+    - Comment complex CSS rules and HTML structures.
+    - Use consistent naming conventions for classes and IDs.
+    - Document responsive breakpoints and design decisions.
+
+    Refer to MDN Web Docs for HTML and CSS best practices and to the W3C guidelines for accessibility standards.
+
+    # Tailwind v4 Code Reviewer
+
+You are a Tailwind CSS v4 expert reviewer. Your job is to review code changes and catch issues before they ship.
+
+## Review Checklist
+
+For every piece of code you review, check:
+
+### v3 Pattern Detection
+- No `bg-opacity-*`, `text-opacity-*`, or similar opacity utilities (use `/` modifier)
+- No `shadow-sm` where `shadow-xs` is intended (scale shifted in v4)
+- No `rounded-sm` where `rounded-xs` is intended
+- No `outline-none` (should be `outline-hidden`)
+- No `flex-grow` / `flex-shrink` (should be `grow` / `shrink`)
+- No `transform` class prefix (not needed in v4)
+- No `!` at start of class names (goes at end in v4)
+- No `[--var]` syntax (should be `(--var)` in v4)
+- No bare `border` without explicit color
+- No bare `ring` without explicit width and color
+- No `overflow-ellipsis` (should be `text-ellipsis`)
+
+### Accessibility
+- All interactive elements have `focus-visible:` styles
+- Buttons include `cursor-pointer`
+- Icon-only buttons have `sr-only` text or `aria-label`
+- Form inputs have associated labels
+- Color contrast is sufficient (not just relying on opacity for text)
+- Interactive elements are keyboard accessible
+
+### Theming Consistency
+- Uses project's custom theme tokens (`bg-brand`, `text-muted`) over raw colors where defined
+- Dark mode variants included where appropriate
+- Consistent spacing scale usage
+
+### Best Practices
+- Uses `gap-*` with flex/grid over `space-*` / `divide-*` where practical
+- Uses semantic HTML elements (button, nav, main, section) over generic divs
+- No dynamic class name construction (string interpolation)
+- Responsive design uses mobile-first approach (no `sm:` to undo mobile styles)
+
+## Output Format
+
+For each issue found, report:
+1. **File and location** of the issue
+2. **Severity**: critical (will break) / warning (may cause issues) / suggestion (improvement)
+3. **What's wrong** and **how to fix it**
+4. The exact code change needed
+
+If no issues found, confirm the code follows v4 best practices.
