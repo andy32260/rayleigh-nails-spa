@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-gold: #c9a84c;
+  --color-gold-hover: #b8973b;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-border: #222222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+/* BEM: Site Header */
+.site-header {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.site-header--scrolled {
+  background-color: rgb(10 10 10 / 0.95);
+  backdrop-filter: blur(12px);
+}
+
+/* BEM: Hero */
+.hero__title {
+  font-family: var(--font-heading);
+}
+
+.hero__accent {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-gold);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* BEM: Section heading */
+.section-heading {
+  font-family: var(--font-heading);
+}
+
+/* BEM: Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-gold);
+  color: var(--color-bg-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-gold-hover);
+}
+
+.btn--outline {
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  background-color: transparent;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-gold);
+  color: var(--color-bg-primary);
+}
+
+/* BEM: Cards */
+.card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-gold);
+}
+
+.card__image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* BEM: Service card overlay */
+.service-card__overlay {
+  background: linear-gradient(to top, rgb(10 10 10 / 0.9) 0%, transparent 60%);
+}
+
+/* BEM: Review card */
+.review-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.review-card__stars {
+  color: var(--color-gold);
+}
+
+/* BEM: Price table */
+.price-table {
+  border: 1px solid var(--color-border);
+}
+
+.price-table__row {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.price-table__row:last-child {
+  border-bottom: none;
+}
+
+/* BEM: Mobile nav */
+.mobile-nav {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav--open {
+  transform: translateX(0);
+}
+
+/* BEM: Gallery */
+.gallery-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* BEM: Form */
+.form-input {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: var(--color-gold);
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* BEM: Feature icon */
+.feature-icon {
+  color: var(--color-gold);
+}
+
+/* Decorative gold line */
+.gold-line {
+  width: 3rem;
+  height: 1px;
+  background-color: var(--color-gold);
+}
+
+/* Page hero banner */
+.page-hero {
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+}

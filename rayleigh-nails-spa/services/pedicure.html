@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedicure &amp; Manicure | Rayleigh Nails Spa</title>
+  <meta name="description" content="Luxury manicure and pedicure treatments at Rayleigh Nails Spa on Rayleigh High Street, Essex.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="font-light leading-relaxed antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
+  <header class="site-header site-header--scrolled fixed top-0 left-0 right-0 z-40 border-b border-[#222222] bg-[#0a0a0a]/95">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+      <a href="../index.html" class="section-heading text-xl font-light tracking-[0.3em] text-[#ffffff] uppercase">Rayleigh Nails Spa</a>
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+        <a href="../index.html" class="text-xs tracking-widest text-[#e0e0e0] uppercase hover:text-[#c9a84c]">Home</a>
+        <a href="../services.html" class="text-xs tracking-widest text-[#c9a84c] uppercase">Services</a>
+        <a href="../contact.html" class="text-xs tracking-widest text-[#e0e0e0] uppercase hover:text-[#c9a84c]">Contact</a>
+        <a href="../contact.html" class="btn btn--primary">Book Now</a>
+      </nav>
+      <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+  </header>
+  <div data-mobile-nav-overlay class="fixed inset-0 z-50 bg-black/60 lg:hidden" hidden></div>
+  <nav id="mobile-nav" data-mobile-nav aria-hidden="true" class="mobile-nav fixed top-0 right-0 z-50 flex h-full w-80 flex-col bg-[#111111] p-8 lg:hidden">
+    <button type="button" data-mobile-nav-close aria-label="Close menu" class="mb-8 ml-auto cursor-pointer text-[#ffffff]"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <ul class="flex flex-col gap-6"><li><a href="../services.html" class="section-heading text-2xl font-light tracking-widest text-[#c9a84c] uppercase">Services</a></li><li><a href="../contact.html" class="section-heading text-2xl font-light tracking-widest text-[#ffffff] uppercase">Contact</a></li></ul>
+    <a href="../contact.html" class="btn btn--primary mt-8 w-full">Book Now</a>
+  </nav>
+  <main id="main">
+    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-20">
+      <div class="mx-auto max-w-4xl px-6 text-center">
+        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase"><a href="../services.html" class="hover:text-[#b8973b]">Services</a> / Pedicure &amp; Manicure</p>
+        <h1 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Pedicure &amp; Manicure</h1>
+      </div>
+    </section>
+    <section class="py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
+        <img src="https://images.unsplash.com/photo-1519415517516-0b0d8d073d2e?w=800&q=80" alt="Pedicure treatment" class="card__image w-full" loading="lazy">
+        <div>
+          <div class="gold-line mb-6"></div>
+          <h2 class="section-heading mb-6 text-3xl font-light tracking-widest text-[#ffffff] uppercase">Hands &amp; Feet Pampered</h2>
+          <p class="mb-4 text-[#e0e0e0]">Treat yourself to a classic or luxury manicure and pedicure. Our treatments include nail shaping, cuticle care, exfoliation and polish application for healthy, beautiful nails.</p>
+          <p class="mb-6 text-[#e0e0e0]">Perfect as a standalone treat or combined with gel or shellac for longer-lasting colour and shine.</p>
+          <ul class="mb-8 space-y-2 text-sm text-[#e0e0e0]">
+            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Classic Manicure</li>
+            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Classic Pedicure</li>
+            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Luxury Mani-Pedi Combo</li>
+            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Gel / Shellac Finish</li>
+          </ul>
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a href="../contact.html" class="btn btn--primary">Book Now</a>
+            <a href="../price-list.html" class="btn btn--outline">View Prices</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-[#222222] bg-[#0a0a0a] py-16"><div class="mx-auto max-w-7xl px-6 text-center text-xs text-[#e0e0e0]/60"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div></footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
