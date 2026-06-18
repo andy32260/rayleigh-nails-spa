@@ -76,3 +76,30 @@ function initReviewCarousel() {
     track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
   });
 }
+
+function initReviewCarousel() {
+  const track = document.querySelector('[data-review-track]');
+  const prevBtn = document.querySelector('[data-review-prev]');
+  const nextBtn = document.querySelector('[data-review-next]');
+  const counter = document.querySelector('[data-review-counter]');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const reviews = track.querySelectorAll('article');
+  let current = 0;
+
+  function updateReview() {
+    track.style.transform = `translateX(-${current * 100}%)`;
+    if (counter) counter.textContent = `${current + 1} / ${reviews.length}`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = current === 0 ? reviews.length - 1 : current - 1;
+    updateReview();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = current === reviews.length - 1 ? 0 : current + 1;
+    updateReview();
+  });
+}
