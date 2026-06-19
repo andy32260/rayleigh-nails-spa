@@ -50,16 +50,16 @@
   </nav>
 
   <main id="main">
-    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase">Our Story</p>
-        <h1 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-6xl">About Us</h1>
+    <section class="page-hero flex min-h-[60vh] items-center justify-center pt-20">
+      <div class="mx-auto max-w-5xl px-6 text-center">
+        <p class="mb-4 text-sm tracking-[0.4em] text-[#c9a84c] uppercase">Our Story</p>
+        <h1 class="section-heading text-6xl font-light tracking-widest text-[#ffffff] uppercase md:text-8xl">About Us</h1>
       </div>
     </section>
 
     <section class="py-24">
       <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
-        <div>
+        <div class="order-1">
           <div class="gold-line mb-6"></div>
           <h2 class="section-heading mb-6 text-3xl font-light tracking-widest text-[#ffffff] uppercase">A Salon Built on Trust</h2>
           <p class="mb-4 text-[#c9a84c]">Rayleigh Nails Spa Salon has been a fixture on Rayleigh High Street for many years, serving both new and returning customers with warmth, skill, and dedication.</p>
@@ -67,7 +67,14 @@
           <p class="mb-4 text-[#c9a84c]">Located just five minutes from Rayleigh Station, we are easy to reach and always ready to welcome you. We recommend booking ahead, especially at weekends, as we are a popular choice in the local area.</p>
           <p class="text-[#c9a84c]">Whether you need acrylics, shellac, a facial, or a relaxing massage, we are here to fulfil your needs with care and attention to detail.</p>
         </div>
-        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Rayleigh Nails Spa salon interior" class="card__image w-full" loading="lazy">
+        <div class="order-2 flex items-center justify-center">
+          <div class="w-full max-w-lg h-96 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+            <p class="text-[#c9a84c] tracking-widest uppercase text-sm">Placeholder Image</p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto mt-12 max-w-7xl px-6 text-center lg:px-8">
+        <a href="contact.html" class="inline-flex items-center justify-center rounded-sm border border-[#c9a84c] bg-[#c9a84c] px-10 py-4 text-sm tracking-widest uppercase text-[#0a0a0a] transition-all duration-300 hover:bg-[#b8973b]">Get in Touch</a>
       </div>
     </section>
 
@@ -79,14 +86,23 @@
         </div>
         <div class="grid gap-8 md:grid-cols-3">
           <article class="card p-8 text-center">
+            <div class="feature-icon mx-auto mb-4 flex h-12 w-12 items-center justify-center border border-[#222222]">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
             <h3 class="section-heading mb-4 text-xl font-light tracking-widest text-[#c9a84c] uppercase">Quality</h3>
             <p class="text-sm text-[#c9a84c]">Premium products and meticulous technique on every treatment, every time.</p>
           </article>
           <article class="card p-8 text-center">
+            <div class="feature-icon mx-auto mb-4 flex h-12 w-12 items-center justify-center border border-[#222222]">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
             <h3 class="section-heading mb-4 text-xl font-light tracking-widest text-[#c9a84c] uppercase">Care</h3>
             <p class="text-sm text-[#c9a84c]">A friendly, relaxed atmosphere where you always feel looked after.</p>
           </article>
           <article class="card p-8 text-center">
+            <div class="feature-icon mx-auto mb-4 flex h-12 w-12 items-center justify-center border border-[#222222]">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </div>
             <h3 class="section-heading mb-4 text-xl font-light tracking-widest text-[#c9a84c] uppercase">Value</h3>
             <p class="text-sm text-[#c9a84c]">Competitive prices across a wide range of treatments without compromising on results.</p>
           </article>
@@ -94,13 +110,7 @@
       </div>
     </section>
 
-    <section class="py-24 text-center">
-      <div class="mx-auto max-w-2xl px-6">
-        <h2 class="section-heading mb-6 text-3xl font-light tracking-widest text-[#ffffff] uppercase">Ready to Visit?</h2>
-        <p class="mb-8 text-[#c9a84c]">Call us on <a href="tel:07949688866" class="text-[#c9a84c] hover:text-[#b8973b]">07949 688866</a> or book through our contact page.</p>
-        <a href="contact.html" class="btn btn--primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">Get in Touch</a>
-      </div>
-    </section>
+
   </main>
 
   <footer class="border-t border-[#222222] bg-[#0a0a0a] py-16">

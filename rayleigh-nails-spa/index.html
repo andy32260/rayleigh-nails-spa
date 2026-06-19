@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-light leading-relaxed antialiased">
+<body class="font-light leading-relaxed antialiased bg-black">
 
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
 
@@ -80,6 +80,9 @@
           <a href="price-list.html" class="inline-block border border-[#c9a84c] px-8 py-4 text-sm tracking-widest uppercase text-[#c9a84c] transition-all duration-300 hover:bg-[#c9a84c] hover:text-black">View Price List</a>
           <a href="services.html" class="inline-block border border-[#c9a84c] px-8 py-4 text-sm tracking-widest uppercase text-[#c9a84c] transition-all duration-300 hover:bg-[#c9a84c] hover:text-black">Our Services</a>
         </div>
+        <div class="mt-6 text-center">
+          <a href="contact.html" class="inline-flex items-center justify-center rounded-sm border border-[#c9a84c] bg-[#c9a84c] px-10 py-4 text-sm tracking-widest uppercase text-[#0a0a0a] transition-all duration-300 hover:bg-[#b8973b]">Book a Treatment</a>
+        </div>
       </div>
     </section>
 
@@ -115,9 +118,9 @@
           <h2 class="section-heading mb-4 text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Our Treatments</h2>
           <p class="mx-auto max-w-xl text-lg text-[#c9a84c]">Choose from a range of nail and beauty treatments, all designed with your comfort and results in mind.</p>
         </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           <a href="services/nail.html" class="card group relative overflow-hidden">
-            <div class="h-64 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+            <div class="h-80 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
               <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-4">Insert Nail Image Here</p>
             </div>
             <div class="service-card__overlay absolute inset-0 flex items-end p-6">
@@ -128,7 +131,7 @@
             </div>
           </a>
           <a href="services/pedicure.html" class="card group relative overflow-hidden">
-            <div class="h-64 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+            <div class="h-80 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
               <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-4">Insert Pedicure Image Here</p>
             </div>
             <div class="service-card__overlay absolute inset-0 flex items-end p-6">
@@ -139,7 +142,7 @@
             </div>
           </a>
           <a href="services/facial.html" class="card group relative overflow-hidden">
-            <div class="h-64 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+            <div class="h-80 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
               <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-4">Insert Facial Image Here</p>
             </div>
             <div class="service-card__overlay absolute inset-0 flex items-end p-6">
@@ -150,7 +153,7 @@
             </div>
           </a>
           <a href="services/massage.html" class="card group relative overflow-hidden">
-            <div class="h-64 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+            <div class="h-80 w-full flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
               <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-4">Insert Massage Image Here</p>
             </div>
             <div class="service-card__overlay absolute inset-0 flex items-end p-6">
@@ -207,67 +210,84 @@
       </div>
     </section>
 
-    <!-- Quality Promise -->
-    <section class="py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
-        <div class="order-2 lg:order-1">
-          <!-- PLACEHOLDER: Replace with quality/salon image -->
-          <div class="w-full h-80 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
-            <p class="text-[#c9a84c] tracking-widest uppercase text-sm">Insert Image Here</p>
-          </div>
-        </div>
-        <div class="order-1 lg:order-2">
-          <div class="gold-line mb-6"></div>
-          <h2 class="section-heading mb-6 text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Essex's Trusted Beauty Salon</h2>
-          <p class="mb-4 text-lg text-[#c9a84c]">Bringing together qualified experts and years of hands-on experience, our passionate team is dedicated to giving you the results you dream of — from a classic manicure to a full set of acrylics.</p>
-          <p class="mb-8 text-lg text-[#c9a84c]">Customer care is our priority. We aim to deliver flawless treatments to every client, with a warm welcome and attention to detail that sets us apart on the High Street.</p>
-          <a href="contact.html" class="btn btn--primary">Book a Treatment</a>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Reviews -->
     <section class="border-t border-[#222222] bg-[#111111] py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <div class="gold-line mb-6"></div>
-            <h2 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Customer Reviews</h2>
-            <p class="mt-2 text-lg text-[#c9a84c]">Hear from our loyal clients across Rayleigh and Essex.</p>
-          </div>
-          <div class="flex items-center gap-4">
-            <button type="button" data-review-prev aria-label="Previous review" class="cursor-pointer border border-[#222222] p-3 text-[#c9a84c] transition-colors hover:border-[#c9a84c]">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
-            </button>
-            <span data-review-counter class="text-base text-[#c9a84c]">1 / 4</span>
-            <button type="button" data-review-next aria-label="Next review" class="cursor-pointer border border-[#222222] p-3 text-[#c9a84c] transition-colors hover:border-[#c9a84c]">
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
+        <div class="mb-12 text-start">
+          <div class="gold-line mb-6"></div>
+          <h2 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Customer Reviews</h2>
+          <p class="mt-2 text-lg text-[#c9a84c]">Hear from our loyal clients across Rayleigh and Essex.</p>
         </div>
         <div class="overflow-hidden">
-          <div data-review-track class="flex transition-transform duration-500 ease-in-out">
+            <div data-review-track class="flex transition-transform duration-500 ease-in-out">
             <article class="review-card w-full shrink-0 p-8">
-              <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-              <p class="mb-6 text-lg text-[#c9a84c]">"Always great service here! The only place I go to get my nails done. Best service for a full set of acrylics with white tips. Such friendly people and professional — 100% recommended."</p>
-              <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Ellie B</p>
+              <div class="flex gap-8">
+                <div class="flex shrink-0">
+                  <div class="h-40 w-40 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 rounded-full bg-[#1a1a1a]">
+                    <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Profile Photo</p>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                  <p class="mb-6 text-lg text-[#c9a84c]">"Always great service here! The only place I go to get my nails done. Best service for a full set of acrylics with white tips. Such friendly people and professional — 100% recommended."</p>
+                  <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Ellie B</p>
+                </div>
+              </div>
             </article>
             <article class="review-card w-full shrink-0 p-8">
-              <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-              <p class="mb-6 text-lg text-[#c9a84c]">"I went here for the first time today — such a lovely experience! I got acrylic nails and they turned out so nice. Very friendly staff, easy conversation, and they clearly love what they do."</p>
-              <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Chloe Falzon</p>
+              <div class="flex gap-8">
+                <div class="flex shrink-0">
+                  <div class="h-40 w-40 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 rounded-full bg-[#1a1a1a]">
+                    <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Profile Photo</p>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                  <p class="mb-6 text-lg text-[#c9a84c]">"I went here for the first time today — such a lovely experience! I got acrylic nails and they turned out so nice. Very friendly staff, easy conversation, and they clearly love what they do."</p>
+                  <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Chloe Falzon</p>
+                </div>
+              </div>
             </article>
             <article class="review-card w-full shrink-0 p-8">
-              <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-              <p class="mb-6 text-lg text-[#c9a84c]">"Brilliant. Very friendly. Always welcoming. Best to book appointments as they are so popular. Range of treatments are amazing and my nails are always admired."</p>
-              <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Hilary Baldock</p>
+              <div class="flex gap-8">
+                <div class="flex shrink-0">
+                  <div class="h-40 w-40 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 rounded-full bg-[#1a1a1a]">
+                    <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Profile Photo</p>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                  <p class="mb-6 text-lg text-[#c9a84c]">"Brilliant. Very friendly. Always welcoming. Best to book appointments as they are so popular. Range of treatments are amazing and my nails are always admired."</p>
+                  <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Hilary Baldock</p>
+                </div>
+              </div>
             </article>
             <article class="review-card w-full shrink-0 p-8">
-              <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-              <p class="mb-6 text-lg text-[#c9a84c]">"Been coming here for a year for shellac nails and never had a problem. They have loads of colours and very reasonable prices."</p>
-              <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Laura Blaker</p>
+              <div class="flex gap-8">
+                <div class="flex shrink-0">
+                  <div class="h-40 w-40 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 rounded-full bg-[#1a1a1a]">
+                    <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Profile Photo</p>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="review-card__stars mb-4 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                  <p class="mb-6 text-lg text-[#c9a84c]">"Been coming here for a year for shellac nails and never had a problem. They have loads of colours and very reasonable prices."</p>
+                  <p class="section-heading text-base font-light tracking-widest text-[#c9a84c] uppercase">Laura Blaker</p>
+                </div>
+              </div>
             </article>
           </div>
+        </div>
+        <div class="mt-6 flex items-center justify-center gap-8">
+          <button type="button" data-review-prev aria-label="Previous review" class="flex h-12 w-12 items-center justify-center border border-[#222222] text-[#c9a84c] transition-colors hover:border-[#c9a84c]">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <span data-review-counter class="text-base text-[#c9a84c]">1 / 4</span>
+          <button type="button" data-review-next aria-label="Next review" class="flex h-12 w-12 items-center justify-center border border-[#222222] text-[#c9a84c] transition-colors hover:border-[#c9a84c]">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -280,17 +300,17 @@
           <h2 class="section-heading mb-4 text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Our Work</h2>
           <p class="mx-auto max-w-xl text-lg text-[#c9a84c]">A glimpse of the artistry and care behind every appointment.</p>
         </div>
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          <div class="gallery-item w-full h-48 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-8">
+          <div class="gallery-item w-full h-64 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
             <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Insert Gallery Image</p>
           </div>
-          <div class="gallery-item w-full h-48 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+          <div class="gallery-item w-full h-64 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
             <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Insert Gallery Image</p>
           </div>
-          <div class="gallery-item w-full h-48 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+          <div class="gallery-item w-full h-64 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
             <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Insert Gallery Image</p>
           </div>
-          <div class="gallery-item w-full h-48 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
+          <div class="gallery-item w-full h-64 flex items-center justify-center border-2 border-dashed border-[#c9a84c]/40 bg-[#1a1a1a]">
             <p class="text-[#c9a84c] tracking-widest uppercase text-xs text-center px-2">Insert Gallery Image</p>
           </div>
         </div>
@@ -329,53 +349,12 @@
         </div>
       </div>
     </section>
-
-  </main>
-
-  <!-- Footer -->
   <footer class="border-t border-[#222222] bg-[#0a0a0a] py-16">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-      <div>
-        <p class="section-heading mb-4 text-xl font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p>
-        <p class="text-base text-[#c9a84c]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p>
-      </div>
-      <div>
-        <h3 class="mb-4 text-sm tracking-widest text-[#c9a84c] uppercase">Opening Times</h3>
-        <ul class="space-y-2 text-base text-[#c9a84c]">
-          <li>Monday – Saturday: 9am – 7pm</li>
-          <li>Sunday: Closed</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="mb-4 text-sm tracking-widest text-[#c9a84c] uppercase">Quick Links</h3>
-        <ul class="space-y-2 text-base">
-          <li><a href="services.html" class="text-[#c9a84c] transition-colors hover:text-[#c9a84c]">Services</a></li>
-          <li><a href="price-list.html" class="text-[#c9a84c] transition-colors hover:text-[#c9a84c]">Price List</a></li>
-          <li><a href="gallery.html" class="text-[#c9a84c] transition-colors hover:text-[#c9a84c]">Gallery</a></li>
-          <li><a href="contact.html" class="text-[#c9a84c] transition-colors hover:text-[#c9a84c]">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="mb-4 text-sm tracking-widest text-[#c9a84c] uppercase">Contact</h3>
-        <ul class="space-y-2 text-base text-[#c9a84c]">
-          <li>109 High Street, Rayleigh, SS6 7QA</li>
-          <li><a href="tel:01268778988" class="transition-colors hover:text-[#c9a84c]">01268 778988</a></li>
-          <li><a href="tel:07949688866" class="transition-colors hover:text-[#c9a84c]">07949 688866</a></li>
-        </ul>
-        <div class="mt-6 flex items-center gap-3">
-          <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105" aria-label="Instagram">
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105" aria-label="Facebook">
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8">
-      <p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p>
-    </div>
-  </footer>
+      <div><p class="section-heading mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p><p class="text-sm text-[#c9a84c]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p></div>
+      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>Monday – Saturday: 9am – 7pm</li><li>Sunday: Closed</li></ul></div>
+      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="services.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Services</a></li><li><a href="price-list.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Price List</a></li><li><a href="gallery.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Gallery</a></li><li><a href="contact.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Contact</a></li></ul></div>
+      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>109 High Street, Rayleigh, SS6 7QA</li><li><a href="tel:01268778988" class="hover:text-[#c9a84c]">01268 778988</a></li><li><a href="tel:07949688866" class="hover:text-[#c9a84c]">07949 688866</a></li></ul><div class="mt-6 flex items-center gap-3"><a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105" aria-label="Instagram"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105" aria-label="Facebook"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div></div><div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div></footer>
 
   <!-- Floating Social Buttons -->
   <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
