@@ -4,28 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Rayleigh Nails Spa</title>
-  <meta name="description" content="Browse our gallery of nail art, manicures, pedicures and salon work at Rayleigh Nails Spa.">
+  <meta name="description" content="Browse our gallery of stunning nail art, luxury manicures, pedicures, and beauty treatments at Rayleigh Nails Spa.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=300;400;500&family=Inter:wght=300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-light leading-relaxed antialiased">
+<body class="bg-[#0a0a0a] text-[#ffffff] font-light leading-relaxed antialiased" style="background-color: #0a0a0a !important; color: #ffffff !important;">
 
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
 
+  <!-- Unified Navigation Header -->
   <header class="site-header site-header--scrolled fixed top-0 left-0 right-0 z-40 border-b border-[#222222] bg-[#0a0a0a]/95">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-      <a href="index.html" class="section-heading text-xl font-light tracking-[0.3em] text-[#ffffff] uppercase">Rayleigh Nails Spa</a>
+      <a href="index.html" class="section-heading text-xl font-light tracking-[0.3em] text-[#ffffff] uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">Rayleigh Nails Spa</a>
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-        <a href="index.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Home</a>
-        <a href="about.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">About</a>
-        <a href="price-list.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Price List</a>
-        <a href="services.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Services</a>
+        <a href="index.html" class="text-xs tracking-widest text-[#c9a84c] uppercase transition-colors hover:text-[#c9a84c]">Home</a>
+        <a href="about.html" class="text-xs tracking-widest text-[#c9a84c] uppercase transition-colors hover:text-[#c9a84c]">About</a>
+        <a href="price-list.html" class="text-xs tracking-widest text-[#c9a84c] uppercase transition-colors hover:text-[#c9a84c]">Price List</a>
+        <a href="services.html" class="text-xs tracking-widest text-[#c9a84c] uppercase transition-colors hover:text-[#c9a84c]">Services</a>
         <a href="gallery.html" class="text-xs tracking-widest text-[#c9a84c] uppercase">Gallery</a>
-        <a href="contact.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Contact</a>
-        <a href="contact.html" class="btn btn--primary">Book Now</a>
+        <a href="contact.html" class="text-xs tracking-widest text-[#c9a84c] uppercase transition-colors hover:text-[#c9a84c]">Contact</a>
       </nav>
       <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
@@ -42,34 +42,53 @@
       <li><a href="gallery.html" class="section-heading text-2xl font-light tracking-widest text-[#c9a84c] uppercase">Gallery</a></li>
       <li><a href="contact.html" class="section-heading text-2xl font-light tracking-widest text-[#ffffff] uppercase">Contact</a></li>
     </ul>
-    <a href="contact.html" class="btn btn--primary mt-8 w-full">Book Now</a>
   </nav>
 
   <main id="main">
-    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase">Portfolio</p>
-        <h1 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-6xl">Gallery</h1>
-        <p class="mx-auto mt-6 max-w-xl text-[#c9a84c]">A showcase of our nail artistry, treatments and salon atmosphere.</p>
+    <!-- Hero Section with explicit forced font sizing and layout stacking -->
+    <section class="page-hero flex min-h-[45vh] items-center justify-center pt-36 pb-12">
+      <div class="mx-auto max-w-4xl px-6 text-center flex flex-col items-center justify-center gap-6" style="display: flex !important; flex-direction: column !important; align-items: center !important;">
+        <p class="text-xs uppercase tracking-[0.5em]" style="color: #c9a84c !important; font-size: 14px !important;">Inspiration</p>
+        
+        <h1 class="section-heading uppercase tracking-widest" style="color: #ffffff !important; font-size: clamp(2.5rem, 6vw, 4.5rem) !important; font-weight: 300 !important; line-height: 1.2 !important; margin: 0 !important;">
+          Our Work
+        </h1>
+        
+        <p class="max-w-2xl tracking-wide leading-relaxed" style="color: #c9a84c !important; font-size: 20px !important; font-weight: 300 !important; margin-top: 8px !important;">
+          A showcase of our recent styles, custom nail art, and flawless finishes.
+        </p>
       </div>
     </section>
 
+    <!-- Gallery Grid Section -->
     <section class="py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-6">
-          <div class="gallery-item md:col-span-2 md:row-span-2"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80" alt="Elegant nail art design" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1610992707988-df75de9fbf30?w=400&q=80" alt="Creative manicure" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1608245448859-4a02d8e84d87?w=400&q=80" alt="Gel polish manicure" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519014816548-bf779f08d8cd?w=400&q=80" alt="Luxury manicure" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519415517516-0b0d8d073d2e?w=400&q=80" alt="Pedicure treatment" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1632345031431-437deed86fb9?w=400&q=80" alt="Nail extensions" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item md:col-span-2"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80" alt="Salon atmosphere" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" alt="Professional nail care" class="h-full w-full object-cover" loading="lazy"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80" alt="Beauty salon interior" class="h-full w-full object-cover" loading="lazy"></div>
-        </div>
-        <div class="mt-16 text-center">
-          <p class="mb-6 text-[#c9a84c]">Love what you see? Book your appointment today.</p>
-          <a href="contact.html" class="btn btn--primary">Book Now</a>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          
+          <div class="overflow-hidden bg-[#111111] border border-[#222222]">
+            <img src="https://images.unsplash.com/photo-1604654894610-df490651e56c?w=600&q=80" alt="Elegant nude nails with clean design" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+
+          <div class="overflow-hidden bg-[#111111] border border-[#222222]">
+            <img src="https://images.unsplash.com/photo-1632345031431-437deed86fb9?w=600&q=80" alt="Detailed luxury nail art finish" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+
+          <div class="overflow-hidden bg-[#111111] border border-[#222222]">
+            <img src="https://images.unsplash.com/photo-1519415517516-0b0d8d073d2e?w=600&q=80" alt="Freshly polished premium pedicure" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+
+          <div class="overflow-hidden bg-[#111111] border border-[#222222]">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=600&q=80" alt="Classic French manicure extensions" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+
+          <div class="overflow-hidden bg-[#111111] border border-[#222222]">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13edd793be?w=600&q=80" alt="Vibrant luxury colored gel set" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+
+          <div class="overflow-hidden bg-[#111111] border border-[#222222]">
+            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80" alt="Premium lash and brow treatment styling" class="w-full h-80 object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+          </div>
+
         </div>
       </div>
     </section>
@@ -100,5 +119,7 @@
     </div>
   </div>
 
-</html>
+  <script src="js/main.js"></script>
 
+</body>
+</html>

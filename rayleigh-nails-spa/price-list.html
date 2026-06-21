@@ -7,11 +7,11 @@
   <meta name="description" content="View our competitive prices for nail, beauty and wellness treatments at Rayleigh Nails Spa, Essex.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=300;400;500&family=Inter:wght=300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-light leading-relaxed antialiased">
+<body class="bg-[#0a0a0a] text-[#ffffff] font-light leading-relaxed antialiased">
 
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
 
@@ -25,7 +25,6 @@
         <a href="services.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Services</a>
         <a href="gallery.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Gallery</a>
         <a href="contact.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Contact</a>
-        <a href="contact.html" class="btn btn--primary">Book Now</a>
       </nav>
       <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
@@ -42,19 +41,21 @@
       <li><a href="gallery.html" class="section-heading text-2xl font-light tracking-widest text-[#ffffff] uppercase">Gallery</a></li>
       <li><a href="contact.html" class="section-heading text-2xl font-light tracking-widest text-[#ffffff] uppercase">Contact</a></li>
     </ul>
-    <a href="contact.html" class="btn btn--primary mt-8 w-full">Book Now</a>
   </nav>
 
   <main id="main">
-    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase">Transparent Pricing</p>
-        <h1 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-6xl">Price List</h1>
-        <p class="mx-auto mt-6 max-w-xl text-[#c9a84c]">Quality treatments at competitive prices. Call us for the latest offers.</p>
+    <section class="page-hero flex min-h-[45vh] items-center justify-center pt-28 bg-[#0a0a0a]">
+      <div class="mx-auto max-w-5xl px-6 text-center flex flex-col gap-2">
+        <p class="text-xl sm:text-2xl md:text-3xl tracking-[0.45em] text-[#c9a84c] uppercase font-light">
+          Transparent Pricing
+        </p>
+        <p class="mx-auto max-w-3xl text-2xl sm:text-3xl md:text-4xl font-light text-[#c9a84c] leading-snug">
+          Quality treatments at competitive prices. Call us for the latest offers.
+        </p>
       </div>
     </section>
 
-    <section class="py-24 price-list-section">
+    <section class="py-24 price-list-section bg-[#0a0a0a]">
       <div class="mx-auto max-w-6xl px-6 lg:px-8">
 
         <div class="mb-16">
@@ -110,14 +111,12 @@
     <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-xs text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
   </footer>
 
-  <!-- Floating Social Buttons -->
   <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
     <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
     </a>
   </div>
 
-  <!-- Mobile sticky action bar -->
   <div class="fixed inset-x-0 bottom-0 z-50 lg:hidden bg-[#0a0a0a] border-t border-[#222222] px-4 py-3">
     <div class="mx-auto flex max-w-7xl gap-3">
       <a href="tel:01268778988" class="min-w-0 flex-1 rounded-full border border-[#c9a84c] bg-transparent px-4 py-3 text-center text-sm uppercase tracking-[0.3em] text-[#c9a84c] transition hover:bg-[#c9a84c] hover:text-[#0a0a0a]">Call</a>
@@ -128,4 +127,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
