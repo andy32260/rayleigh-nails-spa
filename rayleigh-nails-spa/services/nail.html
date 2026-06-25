@@ -11,26 +11,42 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="font-light leading-relaxed antialiased">
+<body class="font-light leading-relaxed antialiased bg-[#0a0a0a] text-[#ffffff]">
+
+  <!-- Skip to Content -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
+
+  <!-- Header Navigation -->
   <header class="site-header site-header--scrolled fixed top-0 left-0 right-0 z-40 border-b border-[#222222] bg-[#0a0a0a]/95">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
       <a href="../index.html" class="section-heading text-xl font-light tracking-[0.3em] text-[#ffffff] uppercase">Rayleigh Nails Spa</a>
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-        <a href="../index.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Home</a>
-        <a href="../about.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">About</a>
-        <a href="../price-list.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Price List</a>
+        <a href="../index.html" class="text-xs tracking-widest text-[#ffffff]/60 uppercase hover:text-[#c9a84c]">Home</a>
+        <a href="../about.html" class="text-xs tracking-widest text-[#ffffff]/60 uppercase hover:text-[#c9a84c]">About</a>
+        <a href="../price-list.html" class="text-xs tracking-widest text-[#ffffff]/60 uppercase hover:text-[#c9a84c]">Price List</a>
         <a href="../services.html" class="text-xs tracking-widest text-[#c9a84c] uppercase">Services</a>
-        <a href="../gallery.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Gallery</a>
-        <a href="../contact.html" class="text-xs tracking-widest text-[#c9a84c] uppercase hover:text-[#c9a84c]">Contact</a>
+        <a href="../gallery.html" class="text-xs tracking-widest text-[#ffffff]/60 uppercase hover:text-[#c9a84c]">Gallery</a>
+        <a href="../contact.html" class="text-xs tracking-widest text-[#ffffff]/60 uppercase hover:text-[#c9a84c]">Contact</a>
         <a href="../contact.html" class="btn btn--primary">Book Now</a>
       </nav>
-      <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay -->
   <div data-mobile-nav-overlay class="fixed inset-0 z-50 bg-black/60 lg:hidden" hidden></div>
+  
+  <!-- Mobile Navigation Menu -->
   <nav id="mobile-nav" data-mobile-nav aria-hidden="true" class="mobile-nav fixed top-0 right-0 z-50 flex h-full w-80 flex-col bg-[#111111] p-8 lg:hidden">
-    <button type="button" data-mobile-nav-close aria-label="Close menu" class="mb-8 ml-auto cursor-pointer text-[#ffffff]"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <button type="button" data-mobile-nav-close aria-label="Close menu" class="mb-8 ml-auto cursor-pointer text-[#ffffff]">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
     <ul class="flex flex-col gap-6">
       <li><a href="../index.html" class="section-heading text-2xl font-light tracking-widest text-[#ffffff] uppercase">Home</a></li>
       <li><a href="../services.html" class="section-heading text-2xl font-light tracking-widest text-[#c9a84c] uppercase">Services</a></li>
@@ -38,159 +54,165 @@
     </ul>
     <a href="../contact.html" class="btn btn--primary mt-8 w-full">Book Now</a>
   </nav>
+
+  <!-- Main Content Area -->
   <main id="main">
-    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-20">
+    <!-- Hero Section -->
+    <section class="page-hero flex min-h-[45vh] items-center justify-center pt-24 bg-[#0e0e0e] border-b border-[#1a1a1a]">
       <div class="mx-auto max-w-4xl px-6 text-center">
-        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase"><a href="../services.html" class="hover:text-[#b8973b]">Services</a> / Nail</p>
+        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase">
+          <a href="../services.html" class="hover:text-[#b8973b] transition-colors">Services</a> / Nail Care
+        </p>
         <h1 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-6xl">Nail Treatments</h1>
       </div>
     </section>
+
+    <!-- Split-Layout Details Section (Replicating facial.html) -->
     <section class="py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
-        <img src="https://images.unsplash.com/photo-1632345031431-437deed86fb9?w=800&q=80" alt="Nail treatment at Rayleigh Nails Spa" class="card__image w-full" loading="lazy">
-        <div>
-          <div class="gold-line mb-6"></div>
-          <h2 class="section-heading mb-6 text-3xl font-light tracking-widest text-[#ffffff] uppercase">Nails Done Right</h2>
-          <p class="mb-4 text-[#c9a84c]">Our nail services are the heart of what we do. From classic manicures to full acrylic sets with white tips, our technicians deliver flawless results with a friendly, professional touch.</p>
-          <p class="mb-6 text-[#c9a84c]">We offer a wide range of colours and finishes including shellac, gel polish, acrylic extensions, infills and bespoke nail art.</p>
-          <ul class="mb-8 space-y-2 text-sm text-[#c9a84c]">
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Manicure &amp; Gel Polish</li>
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Acrylic Full Set &amp; Infill</li>
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Shellac / BIAB</li>
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Nail Art &amp; Extensions</li>
-          </ul>
-          <div class="flex flex-col gap-4 sm:flex-row">
-            <a href="../contact.html" class="btn btn--primary">Book Now</a>
-            <a href="../price-list.html" class="btn btn--outline">View Prices</a>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-16 lg:grid-cols-12 lg:items-start">
+          
+          <!-- Left Column: Featured Image Context Stack -->
+          <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+            <div class="overflow-hidden rounded-lg bg-[#111111] border border-[#222222]">
+              <img src="https://images.unsplash.com/photo-1632345031431-437deed86fb9?w=800&q=80" alt="Nail treatment at Rayleigh Nails Spa" class="w-full h-[500px] object-cover hover:scale-102 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6 bg-[#111111]/50 rounded-lg border border-[#1a1a1a]">
+              <h3 class="text-xs tracking-widest text-[#c9a84c] uppercase mb-2">Why Choose Our Technicians?</h3>
+              <p class="text-sm text-[#aaaaaa] leading-relaxed">Every set is treated as art. We balance cuticle care health with top-tier aesthetic refinement, ensuring long-lasting finishes and resilient extensions.</p>
+            </div>
           </div>
+
+          <!-- Right Column: Accordion-Style Treatments & Deep Dive -->
+          <div class="lg:col-span-7 space-y-12">
+            <div>
+              <div class="gold-line mb-6"></div>
+              <h2 class="section-heading mb-6 text-3xl font-light tracking-widest text-[#ffffff] uppercase">Flawless Extensions &amp; Care</h2>
+              <p class="text-[#aaaaaa] mb-6">Our specialty nail treatments cover a wide array of expert services, from high-durability acrylic sets to nourishing overlay protections. We work with standard premium shellacs, BIAB gels, and bespoke styling finishes.</p>
+            </div>
+
+            <!-- Service Breakdown Block Stack -->
+            <div class="space-y-6">
+              
+              <!-- Treatment Item 1 -->
+              <div class="border-b border-[#222222] pb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                  <h3 class="text-lg font-light tracking-wide text-[#ffffff]">01 / Acrylic Full Sets &amp; Overlays</h3>
+                  <span class="text-xs tracking-widest text-[#c9a84c] uppercase">From Complete Customization</span>
+                </div>
+                <p class="text-sm text-[#aaaaaa]">A structured dynamic extensions tier using premium acrylic polymers. Tailored beautifully to chosen length parameters, including white tips, clear builds, or solid foundation color bases.</p>
+              </div>
+
+              <!-- Treatment Item 2 -->
+              <div class="border-b border-[#222222] pb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                  <h3 class="text-lg font-light tracking-wide text-[#ffffff]">02 / Gel Polish, Shellac &amp; BIAB</h3>
+                  <span class="text-xs tracking-widest text-[#c9a84c] uppercase">High Gloss Shield</span>
+                </div>
+                <p class="text-sm text-[#aaaaaa]">Builder Gel (BIAB) strengthens natural nails to support healthy growth architecture, paired with zero-chip high gloss shellac options that preserve color depths seamlessly for weeks.</p>
+              </div>
+
+              <!-- Treatment Item 3 -->
+              <div class="border-b border-[#222222] pb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                  <h3 class="text-lg font-light tracking-wide text-[#ffffff]">03 / Precision Infills &amp; Balancing</h3>
+                  <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Maintenance Cycle</span>
+                </div>
+                <p class="text-sm text-[#aaaaaa]">Essential logic upkeep to re-balance the center structure of grown-out nail paths. Includes total length correction, step filing, surface refinement, and fresh color sealing layers.</p>
+              </div>
+
+              <!-- Treatment Item 4 -->
+              <div class="border-b border-[#222222] pb-6">
+                <div class="flex justify-between items-baseline mb-2">
+                  <h3 class="text-lg font-light tracking-wide text-[#ffffff]">04 / Bespoke Freehand Nail Art</h3>
+                  <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Custom Design Matrix</span>
+                </div>
+                <p class="text-sm text-[#aaaaaa]">Intricate hand-painted line structures, minimal geometric designs, ombré gradients, and premium chrome additions configured to reflect unique stylistic criteria.</p>
+              </div>
+
+            </div>
+
+            <!-- Actions Row -->
+            <div class="pt-4 flex flex-col gap-4 sm:flex-row">
+              <a href="../contact.html" class="btn btn--primary text-center">Book Your Session</a>
+              <a href="../price-list.html" class="btn btn--outline text-center">Full Service Menu Prices</a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Consolidated Footer -->
   <footer class="border-t border-[#222222] bg-[#0a0a0a] py-16">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-      <div><p class="section-heading mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p><p class="text-sm text-[#c9a84c]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p></div>
-      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>Monday – Saturday: 9am – 7pm</li><li>Sunday: Closed</li></ul></div>
-      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="../services.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Services</a></li><li><a href="../price-list.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Price List</a></li><li><a href="../gallery.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Gallery</a></li><li><a href="../contact.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Contact</a></li></ul></div>
-      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>109 High Street, Rayleigh, SS6 7QA</li><li><a href="tel:01268778988" class="hover:text-[#c9a84c]">01268 778988</a></li><li><a href="tel:07949688866" class="hover:text-[#c9a84c]">07949 688866</a></li></ul><div class="mt-6 flex items-center gap-3"><a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105" aria-label="Instagram"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105" aria-label="Facebook"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
+      <div>
+        <p class="section-heading mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p>
+        <p class="text-sm text-[#aaaaaa]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3>
+        <ul class="space-y-2 text-sm text-[#aaaaaa]">
+          <li>Monday – Saturday: 9am – 7pm</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="../services.html" class="text-[#aaaaaa] hover:text-[#c9a84c] transition-colors">Services</a></li>
+          <li><a href="../price-list.html" class="text-[#aaaaaa] hover:text-[#c9a84c] transition-colors">Price List</a></li>
+          <li><a href="../gallery.html" class="text-[#aaaaaa] hover:text-[#c9a84c] transition-colors">Gallery</a></li>
+          <li><a href="../contact.html" class="text-[#aaaaaa] hover:text-[#c9a84c] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3>
+        <ul class="space-y-2 text-sm text-[#aaaaaa]">
+          <li>109 High Street, Rayleigh, SS6 7QA</li>
+          <li><a href="tel:01268778988" class="hover:text-[#c9a84c] transition-colors">01268 778988</a></li>
+          <li><a href="tel:07949688866" class="hover:text-[#c9a84c] transition-colors">07949 688866</a></li>
+        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105" aria-label="Instagram">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105" aria-label="Facebook">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
+    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#aaaaaa]/40 lg:px-8">
+      <p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Floating Social Buttons -->
+  <!-- Floating Social Action Buttons -->
   <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
     <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
+      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/>
+      </svg>
     </a>
     <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
     </a>
     <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
+      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+    </a>
+  </div>
 
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372;-0.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 ... (truncated)
-
+</body>
+</html>
