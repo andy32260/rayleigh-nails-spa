@@ -11,64 +11,162 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="font-light leading-relaxed antialiased">
+<body class="bg-[#0a0a0a] text-[#ffffff] font-light leading-relaxed antialiased">
+
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
-  <header class="site-header site-header--scrolled fixed top-0 left-0 right-0 z-40 border-b border-[#222222] bg-[#0a0a0a]/95">
+
+  <!-- Top Sticky Navigation Header -->
+  <header class="site-header fixed top-0 left-0 right-0 z-40 bg-[#0a0a0a]/80 backdrop-blur-xs border-b border-[#222222]">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-      <a href="../index.html" class="section-heading text-xl font-light tracking-[0.3em] text-[#ffffff] uppercase">Rayleigh Nails Spa</a>
+      <a href="../index.html" class="section-heading text-2xl font-light tracking-[0.3em] text-[#ffffff] uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+        Rayleigh Nails Spa
+      </a>
       <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-        <a href="../services.html" class="text-xs tracking-widest text-[#c9a84c] uppercase">Services</a>
-        <a href="../contact.html" class="btn btn--primary">Book Now</a>
+        <a href="../index.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Home</a>
+        <a href="../about.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">About</a>
+        <a href="../price-list.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Price List</a>
+        <a href="../services.html" class="text-sm tracking-widest text-[#c9a84c] uppercase">Services</a>
+        <a href="../gallery.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Gallery</a>
+        <a href="../contact.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Contact</a>
       </nav>
-      <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
   </header>
-  <div data-mobile-nav-overlay class="fixed inset-0 z-50 bg-black/60 lg:hidden" hidden></div>
+
+  <!-- Sliding Mobile Sidebar Navigation Menu Overlay Components -->
+  <div data-mobile-nav-overlay class="fixed inset-0 z-50 bg-black/60 lg:hidden" aria-hidden="true" hidden></div>
   <nav id="mobile-nav" data-mobile-nav aria-hidden="true" class="mobile-nav fixed top-0 right-0 z-50 flex h-full w-80 flex-col bg-[#111111] p-8 lg:hidden">
-    <button type="button" data-mobile-nav-close aria-label="Close menu" class="mb-8 ml-auto cursor-pointer text-[#ffffff]"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg></button>
-    <a href="../contact.html" class="btn btn--primary mt-8 w-full">Book Now</a>
+    <button type="button" data-mobile-nav-close aria-label="Close menu" class="mb-8 ml-auto cursor-pointer text-[#ffffff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <ul class="flex flex-col gap-6">
+      <li><a href="../index.html" class="text-2xl font-light tracking-widest text-[#ffffff] uppercase">Home</a></li>
+      <li><a href="../about.html" class="text-2xl font-light tracking-widest text-[#ffffff] uppercase">About</a></li>
+      <li><a href="../price-list.html" class="text-2xl font-light tracking-widest text-[#ffffff] uppercase">Price List</a></li>
+      <li><a href="../services.html" class="text-2xl font-light tracking-widest text-[#c9a84c] uppercase">Services</a></li>
+      <li><a href="../gallery.html" class="text-2xl font-light tracking-widest text-[#ffffff] uppercase">Gallery</a></li>
+      <li><a href="../contact.html" class="text-2xl font-light tracking-widest text-[#ffffff] uppercase">Contact</a></li>
+    </ul>
   </nav>
-  <main id="main">
-    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <p class="mb-4 text-xs tracking-[0.4em] text-[#c9a84c] uppercase"><a href="../services.html" class="hover:text-[#b8973b]">Services</a> / Waxing</p>
-        <h1 class="section-heading text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-6xl">Waxing</h1>
+
+  <!-- Page Main Content Workspace -->
+  <main id="main" class="bg-[#0a0a0a]">
+   
+    <!-- Hero Header Context Unit -->
+    <section class="pt-44 pb-12 bg-[#0a0a0a]">
+      <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+        <h1 class="inline-block text-4xl sm:text-5xl md:text-6xl font-light tracking-[0.3em] text-[#ffffff] uppercase border-b border-[#c9a84c] pb-8">
+          Waxing
+        </h1>
       </div>
     </section>
-    <section class="py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
-        <img src="https://images.unsplash.com/photo-1560750588-73207b1e4d2b?w=800&q=80" alt="Waxing treatment" class="card__image w-full" loading="lazy">
-        <div>
-          <div class="gold-line mb-6"></div>
-          <h2 class="section-heading mb-6 text-3xl font-light tracking-widest text-[#ffffff] uppercase">Silky Smooth Skin</h2>
-          <p class="mb-4 text-[#c9a84c]">Our professional waxing services deliver smooth, long-lasting results across the face and body. Using quality wax and careful technique, we make the experience as comfortable as possible.</p>
-          <p class="mb-6 text-[#c9a84c]">From eyebrow shaping to full leg waxing, we offer a comprehensive range at prices that keep our customers coming back.</p>
-          <ul class="mb-8 space-y-2 text-sm text-[#c9a84c]">
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Eyebrow &amp; Lip Wax</li>
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Underarm Wax</li>
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Half &amp; Full Leg Wax</li>
-            <li class="flex items-center gap-3"><span class="text-[#c9a84c]">—</span> Bikini &amp; Brazilian Wax</li>
-          </ul>
-          <div class="flex flex-col gap-4 sm:flex-row">
-            <a href="../contact.html" class="btn btn--primary">Book Now</a>
-            <a href="../price-list.html" class="btn btn--outline">View Prices</a>
+
+    <!-- Detailed Service Display Overview Segment Components Grid Blocks -->
+    <section class="pb-24 bg-[#0a0a0a]">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 flex justify-center">
+        <div class="grid items-center gap-16 lg:grid-cols-12 max-w-6xl w-full">
+   
+          <!-- Left Content Image Block -->
+          <div class="lg:col-span-6 flex items-center justify-center w-full">
+            <div class="w-full max-w-full aspect-[4/5] border border-[#222222] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1560750588-73207b1e4d2b?w=800&q=80" alt="Professional wax application and soothing therapy session for smooth skin" class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 hover:scale-105" loading="lazy">
+            </div>
           </div>
+
+          <!-- Right Content Text Details Block -->
+          <div class="lg:col-span-6 space-y-6 text-left">
+            <h2 class="text-3xl font-light tracking-widest text-[#ffffff] uppercase">Silky Smooth Skin</h2>
+            <div class="h-[1px] w-12 bg-[#c9a84c]"></div>
+            <p class="text-sm sm:text-base text-[#e0e0e0] font-light leading-relaxed">
+              Our professional waxing services deliver smooth, long-lasting results across the face and body. Using premium, high-grade wax blends and meticulous care, we focus on making your therapy layout as comfortable and skin-soothing as possible.
+            </p>
+            <p class="text-sm sm:text-base text-[#e0e0e0] font-light leading-relaxed">
+              From pristine eyebrow shaping workflows to complete body definition profiles, we provide a clean, therapeutic workspace to keep your skin perfectly clear, clean, and radiant.
+            </p>
+           
+            <ul class="pt-2 space-y-3 text-sm text-[#e0e0e0] font-light tracking-wide">
+              <li class="flex items-center gap-4"><span class="text-[#c9a84c] text-xs">─</span> Eyebrow &amp; Lip Precision Wax</li>
+              <li class="flex items-center gap-4"><span class="text-[#c9a84c] text-xs">─</span> Gentle Underarm Conditioning Wax</li>
+              <li class="flex items-center gap-4"><span class="text-[#c9a84c] text-xs">─</span> Half &amp; Full Leg Smoothing Therapy</li>
+              <li class="flex items-center gap-4"><span class="text-[#c9a84c] text-xs">─</span> Intimate Bikini &amp; Brazilian Styling</li>
+            </ul>
+
+            <div class="flex flex-col gap-4 sm:flex-row pt-6">
+              <a href="../contact.html" class="inline-flex items-center justify-center border border-[#c9a84c] bg-[#c9a84c] px-8 py-3.5 text-xs tracking-widest uppercase text-[#0a0a0a] font-medium transition-all duration-300 hover:bg-[#b8973b] hover:text-[#ffffff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+                Book Now
+              </a>
+              <a href="../price-list.html" class="inline-flex items-center justify-center border border-[#c9a84c] bg-transparent px-8 py-3.5 text-xs tracking-widest uppercase text-[#c9a84c] transition-all duration-300 hover:bg-[#c9a84c]/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+                View Prices
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Global Base Page Footer System Structure Elements -->
   <footer class="border-t border-[#222222] bg-[#0a0a0a] py-16">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-      <div><p class="section-heading mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p><p class="text-sm text-[#c9a84c]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p></div>
-      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>Monday – Saturday: 9am – 7pm</li><li>Sunday: Closed</li></ul></div>
-      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="../services.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Services</a></li><li><a href="../price-list.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Price List</a></li><li><a href="../gallery.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Gallery</a></li><li><a href="../contact.html" class="text-[#c9a84c] hover:text-[#c9a84c]">Contact</a></li></ul></div>
-      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>109 High Street, Rayleigh, SS6 7QA</li><li><a href="tel:01268778988" class="hover:text-[#c9a84c]">01268 778988</a></li><li><a href="tel:07949688866" class="hover:text-[#c9a84c]">07949 688866</a></li></ul><div class="mt-6 flex items-center gap-3"><a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105" aria-label="Instagram"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105" aria-label="Facebook"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
+      <div>
+        <p class="mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p>
+        <p class="text-sm text-[#e0e0e0]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3>
+        <ul class="space-y-2 text-sm text-[#e0e0e0]">
+          <li>Monday – Saturday: 9am – 7pm</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="../services.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Services</a></li>
+          <li><a href="../price-list.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Price List</a></li>
+          <li><a href="../gallery.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Gallery</a></li>
+          <li><a href="../contact.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3>
+        <ul class="space-y-2 text-sm text-[#e0e0e0]">
+          <li>109 High Street, Rayleigh, SS6 7QA</li>
+          <li><a href="tel:01268778988" class="hover:text-[#c9a84c]">01268 778988</a></li>
+          <li><a href="tel:07949688866" class="hover:text-[#c9a84c]">07949 688866</a></li>
+        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#c9a84c]" aria-label="Instagram">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#c9a84c]" aria-label="Facebook">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
+    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-xs text-[#c9a84c]/60 lg:px-8">
+      <p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Floating Social Buttons -->
+  <!-- Desktop Floating Action Panel (Bottom Right) -->
   <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
-      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075;-0.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01;-0.198 0-.52.074-.792.372;-0.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074 ... (truncated)
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-[#c9a84c]">
+      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
+    </a>
+   
+    <!-- Instagram Floating Icon -->
+    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram portfolio feed" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-[#c9a84c]">
+      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+  </div>
 
+</body>
+</html>
