@@ -103,3 +103,62 @@ function initReviewCarousel() {
     updateReview();
   });
 }
+
+// Gallery Pagination Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const pages = document.querySelectorAll('[data-gallery-page]');
+  const prevBtn = document.getElementById('gallery-prev');
+  const nextBtn = document.getElementById('gallery-next');
+  const counter = document.getElementById('gallery-counter');
+  
+  // If these elements don't exist on the current page (like index.html), exit safely
+  if (!pages.length || !prevBtn || !nextBtn || !counter) return;
+
+  let currentPage = 0;
+  const totalPages = pages.length;
+
+  function updateGallery() {
+    // Hide all pages, show only the active page
+    pages.forEach((page, index) => {
+      if (index === currentPage) {
+        page.classList.remove('hidden');
+      } else {
+        page.classList.add('hidden');
+      }
+    });
+
+    // Update indicator text
+    counter.textContent = `Page ${currentPage + 1} / ${totalPages}`;
+
+    // Handle disabled button appearances/states
+    prevBtn.disabled = currentPage === 0;
+    nextBtn.disabled = currentPage === totalPages - 1;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateGallery();
+      // Smoothly scroll back to the top of the gallery grid container
+      document.getElementById('gallery-container').scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'nearest' 
+      });
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      updateGallery();
+      // Smoothly scroll back to the top of the gallery grid container
+      document.getElementById('gallery-container').scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'nearest' 
+      });
+    }
+  });
+
+  // Run immediately on page load to set correct initial states
+  updateGallery();
+});
