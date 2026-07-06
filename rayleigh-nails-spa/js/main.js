@@ -162,3 +162,76 @@ document.addEventListener('DOMContentLoaded', () => {
   // Run immediately on page load to set correct initial states
   updateGallery();
 });
+
+// Pagination handler helper factory function
+function initGalleryPagination(config) {
+  const container = document.getElementById(config.containerId);
+  if (!container) return;
+
+  const prevBtn = document.getElementById(config.prevBtnId);
+  const nextBtn = document.getElementById(config.nextBtnId);
+  const currentTxt = document.getElementById(config.currentId);
+  const totalTxt = document.getElementById(config.totalId);
+  const pages = container.querySelectorAll(config.pageSelector);
+  
+  let currentIndex = 0;
+  const totalPages = pages.length;
+
+  if (totalTxt) totalTxt.textContent = totalPages;
+
+  function updateView(direction) {
+    pages.forEach((page, idx) => {
+      if (idx === currentIndex) {
+        page.classList.remove('hidden');
+        if (direction === 'next') page.classList.add('animate-slide-right');
+        if (direction === 'prev') page.classList.add('animate-slide-left');
+      } else {
+        page.classList.add('hidden');
+        page.classList.remove('animate-slide-right', 'animate-slide-left');
+      }
+    });
+
+    if (currentTxt) currentTxt.textContent = currentIndex + 1;
+    if (prevBtn) prevBtn.disabled = currentIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentIndex === totalPages - 1;
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateView('prev');
+    }
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    if (currentIndex < totalPages - 1) {
+      currentIndex++;
+      updateView('next');
+    }
+  });
+
+  updateView();
+}
+
+// Fire engines on DOM content load
+document.addEventListener('DOMContentLoaded', () => {
+  // Top Gallery Layout
+  initGalleryPagination({
+    containerId: 'gallery-content-viewport',
+    prevBtnId: 'gallery-prev',
+    nextBtnId: 'gallery-next',
+    currentId: 'gallery-current',
+    totalId: 'gallery-total',
+    pageSelector: '[data-gallery-page]'
+  });
+
+  // Bottom Ideas Layout
+  initGalleryPagination({
+    containerId: 'ideas-content-viewport',
+    prevBtnId: 'ideas-prev',
+    nextBtnId: 'ideas-next',
+    currentId: 'ideas-current',
+    totalId: 'ideas-total',
+    pageSelector: '[data-ideas-page]'
+  });
+});

@@ -7,39 +7,51 @@
   <meta name="description" content="Browse our gallery of stunning nail art, luxury manicures, pedicures, and beauty treatments at Rayleigh Nails Spa.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=300;400;500&family=Inter:wght=300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    @keyframes slideFromRight {
+      from { transform: translateX(30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideFromLeft {
+      from { transform: translateX(-30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-right { animation: slideFromRight 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+    .animate-slide-left { animation: slideFromLeft 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+  </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#ffffff] font-light leading-relaxed antialiased" style="background-color: #0a0a0a !important; color: #ffffff !important;">
 
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#c9a84c] focus:text-[#0a0a0a]">Skip to content</a>
 
-<header class="site-header fixed top-0 left-0 right-0 z-40 bg-[#0a0a0a]/80">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2.5 lg:px-8">
-    
-    <a href="index.html" class="inline-block h-10 md:h-12 flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
-      <img src="images/Header-Logo.png" alt="Rayleigh Nails Spa" class="h-full w-auto object-contain">
-    </a>
+  <!-- Header Navigation -->
+  <header class="site-header fixed top-0 left-0 right-0 z-40 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#222222]/30">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="index.html" class="inline-block h-10 md:h-12 flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+        <img src="images/Header-Logo.png" alt="Rayleigh Nails Spa" class="h-full w-auto object-contain">
+      </a>
 
-    <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-      <a href="index.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Home</a>
-      <a href="about.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">About</a>
-      <a href="price-list.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Price List</a>
-      <a href="services.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Services</a>
-      <a href="gallery.html" class="text-sm tracking-widest text-[#c9a84c] uppercase">Gallery</a>
-      <a href="contact.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Contact</a>
-    </nav>
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
+        <a href="index.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Home</a>
+        <a href="about.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">About</a>
+        <a href="price-list.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Price List</a>
+        <a href="services.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Services</a>
+        <a href="gallery.html" class="text-sm tracking-widest text-[#c9a84c] uppercase">Gallery</a>
+        <a href="contact.html" class="text-sm tracking-widest text-[#ffffff] uppercase transition-colors hover:text-[#c9a84c]">Contact</a>
+      </nav>
 
-    <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden">
-      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
+      <button type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" class="cursor-pointer p-2 text-[#ffffff] lg:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-  </div>
-</header>
-
+  <!-- Mobile Drawer Menu -->
   <div data-mobile-nav-overlay class="fixed inset-0 z-50 bg-black/60 lg:hidden" aria-hidden="true" hidden></div>
   <nav id="mobile-nav" data-mobile-nav aria-hidden="true" class="mobile-nav fixed top-0 right-0 z-50 flex h-full w-80 flex-col bg-[#111111] p-8 lg:hidden">
     <button type="button" data-mobile-nav-close aria-label="Close menu" class="mb-8 ml-auto cursor-pointer text-[#ffffff]">
@@ -58,220 +70,307 @@
     <a href="contact.html" class="btn btn--primary mt-8 w-full">Book Now</a>
   </nav>
 
-  <main id="main" class="pt-32 pb-24">
-    <section class="mx-auto max-w-7xl px-6 lg:px-8">
-      
-      <div class="mb-16 text-center">
-        <div class="gold-line mx-auto mb-6"></div>
-        <h1 class="section-heading mb-4 text-4xl font-light tracking-widest text-[#ffffff] uppercase md:text-5xl">Our Gallery</h1>
-        <p class="mx-auto max-w-2xl text-lg font-light tracking-wide text-[#c9a84c]">
-          Explore a curated showcase of our professional work, custom nail transformations, and pristine finishes.
-        </p>
+  <main id="main">
+
+    <!-- Page Hero Banner Template Layout (pb-12 brings content up) -->
+    <section class="page-hero relative border-b border-[#222222]/50 bg-[#111111] pt-40 pb-12 text-center">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(199,168,76,0.05),transparent_70%)] pointer-events-none"></div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+        <div class="gold-line mx-auto mb-4"></div>
+        <h1 class="hero__title font-serif text-4xl font-light tracking-widest text-white uppercase sm:text-5xl md:text-6xl" style="font-family: 'Cormorant Garamond', serif !important;">Our Gallery</h1>
+        <p class="mx-auto mt-4 max-w-2xl text-base text-[#c9a84c]">Explore our portfolio of beautiful nail designs, refreshing pedicures, and professional salon work executed on Rayleigh High Street.</p>
       </div>
+    </section>
 
-      <div id="gallery-container" class="max-w-6xl mx-auto flex items-stretch gap-2 md:gap-6 relative">
+    <!-- SECTION 1: OUR WORK (pt-12 closes the gap between sections) -->
+    <section class="bg-[#0a0a0a] pt-12 pb-16" style="background-color: #0a0a0a !important;">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
         
-        <button type="button" id="gallery-prev" aria-label="Previous page" class="flex w-12 md:w-16 items-center justify-center border border-[#222222] bg-[#0a0a0a]/50 text-[#c9a84c] transition-colors hover:border-[#c9a84c] hover:bg-[#111111] cursor-pointer disabled:opacity-10 disabled:hover:border-[#222222] disabled:hover:bg-transparent shrink-0">
-          <svg class="h-6 w-6 md:h-8 md:w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/>
-          </svg>
-        </button>
-
-        <div class="flex-1">
-          
-          <div data-gallery-page class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img1.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img2.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img3.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img4.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img5.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img6.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-          </div>
-
-          <div data-gallery-page class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8 hidden">
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img7.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img8.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img9.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img10.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img11.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img12.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-          </div>
-
-          <div data-gallery-page class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8 hidden">
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img13.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img14.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img15.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img16.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img17.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img18.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-          </div>
-
-          <div data-gallery-page class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8 hidden">
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img19.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img20.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img21.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img22.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img23.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="w-full aspect-square overflow-hidden border border-[#222222]">
-              <img src="images/gallery/img24.jpg" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-            </div>
-          </div>
-
+        <!-- Centralised Section Header Title -->
+        <div class="mb-12 text-center">
+          <h2 class="font-serif text-3xl font-light tracking-widest text-white uppercase" style="font-family: 'Cormorant Garamond', serif !important;">OUR WORK</h2>
+          <div class="gold-line mt-2 mx-auto"></div>
         </div>
 
-        <button type="button" id="gallery-next" aria-label="Next page" class="flex w-12 md:w-16 items-center justify-center border border-[#222222] bg-[#0a0a0a]/50 text-[#c9a84c] transition-colors hover:border-[#c9a84c] hover:bg-[#111111] cursor-pointer disabled:opacity-10 disabled:hover:border-[#222222] disabled:hover:bg-transparent shrink-0">
-          <svg class="h-6 w-6 md:h-8 md:w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
-          </svg>
-        </button>
+        <!-- Flex Container housing side buttons stretched to image grid height -->
+        <div id="gallery-container" class="w-full flex items-stretch gap-4 md:gap-6">
+          
+          <!-- Stretched Left Control Button without text -->
+          <button type="button" id="gallery-prev" aria-label="Previous photos" class="w-12 md:w-16 cursor-pointer border border-[#222222] text-[#c9a84c] flex items-center justify-center transition-colors hover:border-[#c9a84c] disabled:opacity-20 disabled:hover:border-[#222222] disabled:cursor-not-allowed shrink-0">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Gallery Frame Display Target Container Area -->
+          <div id="gallery-content-viewport" class="flex-1">
+            
+            <!-- Page 1 -->
+            <div data-gallery-page class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img1.JPG" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img2.JPG" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img3.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img4.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img5.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img6.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+
+            <!-- Page 2 -->
+            <div data-gallery-page class="hidden grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img7.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img8.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img9.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img10.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img11.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img12.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+
+            <!-- Page 3 -->
+            <div data-gallery-page class="hidden grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img13.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img14.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img15.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img16.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img17.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img18.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+
+            <!-- Page 4 -->
+            <div data-gallery-page class="hidden grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img19.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img20.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img21.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img22.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img23.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/img24.png" alt="Rayleigh Nails Spa Work Portfolio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+          </div>
+
+          <!-- Stretched Right Control Button without text -->
+          <button type="button" id="gallery-next" aria-label="Next photos" class="w-12 md:w-16 cursor-pointer border border-[#222222] text-[#c9a84c] flex items-center justify-center transition-colors hover:border-[#c9a84c] disabled:opacity-20 disabled:hover:border-[#222222] disabled:cursor-not-allowed shrink-0">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Optimized text-sm Bigger Tracker Centered Beneath Grid Container -->
+        <div class="mt-6 flex justify-center gap-4 text-sm font-medium tracking-widest text-[#c9a84c] uppercase">
+          <span id="gallery-current">1</span>
+          <span class="text-zinc-600 font-normal">/</span>
+          <span id="gallery-total">4</span>
+        </div>
 
       </div>
-
-      <div class="mt-8 text-center">
-        <span id="gallery-counter" class="text-sm uppercase tracking-widest text-[#c9a84c]/80">Page 1 / 4</span>
-      </div>
-
     </section>
+
+    <!-- SECTION 2: NAIL DESIGN IDEAS -->
+    <section class="border-t border-[#222222]/40 bg-[#111111] py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        
+        <!-- Centralised Section Header Title -->
+        <div class="mb-12 text-center">
+          <h2 class="font-serif text-3xl font-light tracking-widest text-white uppercase" style="font-family: 'Cormorant Garamond', serif !important;">NAIL DESIGN IDEAS</h2>
+          <div class="gold-line mt-2 mx-auto"></div>
+        </div>
+
+        <!-- Multi-page interactive container matching section 1 -->
+        <div id="ideas-container" class="w-full flex items-stretch gap-4 md:gap-6">
+          
+          <!-- Ideas Section Left Button -->
+          <button type="button" id="ideas-prev" aria-label="Previous page" class="w-12 md:w-16 cursor-pointer border border-[#222222] text-[#c9a84c] flex items-center justify-center transition-colors hover:border-[#c9a84c] disabled:opacity-20 disabled:hover:border-[#222222] disabled:cursor-not-allowed shrink-0">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Viewport framework for Ideas Pagination -->
+          <div id="ideas-content-viewport" class="flex-1">
+            
+            <!-- Ideas Page 1 -->
+            <div data-ideas-page class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 01</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Luxury Chrome Dust</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">High-shine metallic accents, layered mirror-dust techniques, and platinum palettes.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 02</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Asymmetric French</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Modern negative space frameworks, structural microline tips, and minimalist clean borders.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 03</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Velvet Magnetic</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Deep dimensional shifting parameters that catch sunlight or elegant evening rays dynamically.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 04</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Milky BIAB Overlay</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Clean nail architecture focusing on strength enhancements, quiet elegance, and subtle gloss tones.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 05</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Abstract Tortoiseshell</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Warm amber depth models, hand-painted jelly layering, and customized rich tonal patches.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 06</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Celestial Foil Accents</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Fine embedded 24k gold leaf particles paired cleanly against ultra-matte dark foundations.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ideas Page 2 -->
+            <div data-ideas-page class="hidden grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 07</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Glass Opal Shimmer</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Translucent iridescent flaking configurations reflecting subtle pink and green tones across daylight lines.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 08</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Glazed Donut Polish</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">The iconic minimalist chrome wash layout paired over clean milky bases for an effortless premium shine.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 09</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Double-Tip Minimalist</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Stacked multi-line details using contrasting gold line art alongside classical soft white tones.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 10</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Emerald Jade Textures</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Marbled organic textures imitating fine quartz and emerald gem surfaces with subtle metallic veins.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 11</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Matte Velvet Ombré</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Seamless dark gradients transitioning smoothly from rich chocolate down to warm autumn nudes.</p>
+                </div>
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222] bg-[#0a0a0a] flex flex-col justify-between p-6 group hover:border-[#c9a84c]/60 transition-colors duration-300">
+                <span class="text-xs tracking-widest text-[#c9a84c] uppercase">Concept 12</span>
+                <div class="mt-auto">
+                  <h3 class="font-serif text-xl text-white tracking-wide" style="font-family: 'Cormorant Garamond', serif !important;">Encapsulated Florals</h3>
+                  <p class="mt-2 text-xs text-zinc-400 font-light">Fine dried botanical elements embedded meticulously into clear structural gel overlays.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Ideas Section Right Button -->
+          <button type="button" id="ideas-next" aria-label="Next page" class="w-12 md:w-16 cursor-pointer border border-[#222222] text-[#c9a84c] flex items-center justify-center transition-colors hover:border-[#c9a84c] disabled:opacity-20 disabled:hover:border-[#222222] disabled:cursor-not-allowed shrink-0">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Optimized text-sm Bigger Tracker Centered Beneath Ideas Section -->
+        <div class="mt-6 flex justify-center gap-4 text-sm font-medium tracking-widest text-[#c9a84c] uppercase">
+          <span id="ideas-current">1</span>
+          <span class="text-zinc-600 font-normal">/</span>
+          <span id="ideas-total">2</span>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer Section -->
   <footer class="border-t border-[#222222] bg-[#0a0a0a] py-16">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-      <div>
-        <p class="section-heading mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p>
-        <p class="text-sm text-[#e0e0e0]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p>
-      </div>
-      <div>
-        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3>
-        <ul class="space-y-2 text-sm text-[#e0e0e0]">
-          <li>Monday – Saturday: 9:30am – 7pm</li>
-          <li>Sunday: Closed</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="services.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Services</a></li>
-          <li><a href="price-list.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Price List</a></li>
-          <li><a href="gallery.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Gallery</a></li>
-          <li><a href="contact.html" class="text-[#e0e0e0] hover:text-[#c9a84c] transition-colors duration-200">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3>
-        <ul class="space-y-2 text-sm text-[#e0e0e0]">
-          <li>109 High Street, Rayleigh, SS6 7QA</li>
-          <li><a href="tel:01268778988" class="hover:text-[#c9a84c]">01268 778988</a></li>
-          <li><a href="tel:07949688866" class="hover:text-[#c9a84c]">07949 688866</a></li>
-        </ul>
-        
-        <div class="mt-6 flex items-center gap-3">
-          <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1306C] text-white transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#c9a84c]" aria-label="Instagram">
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#c9a84c] p-0.5" aria-label="Facebook">
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 14.991 22 12z"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-xs text-[#c9a84c]/60 lg:px-8">
-      <p>&copy; 2026 Rayleigh Nails Spa. All rights reserved.</p>
-    </div>
+      <div><p class="section-heading mb-4 text-lg font-light tracking-widest text-[#ffffff] uppercase">Rayleigh Nails Spa</p><p class="text-sm text-[#c9a84c]">Luxury nail and beauty treatments in the heart of Rayleigh, Essex.</p></div>
+      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Opening Times</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>Monday – Saturday: 9:30am – 7pm</li><li>Sunday: Closed</li></ul></div>
+      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="services.html" class="text-[#c9a84c]">Services</a></li><li><a href="price-list.html" class="text-[#c9a84c]">Price List</a></li><li><a href="gallery.html" class="text-[#c9a84c]">Gallery</a></li><li><a href="contact.html" class="text-[#c9a84c]">Contact</a></li></ul></div>
+      <div><h3 class="mb-4 text-xs tracking-widest text-[#c9a84c] uppercase">Contact</h3><ul class="space-y-2 text-sm text-[#c9a84c]"><li>109 High Street, Rayleigh, SS6 7QA</li><li><a href="tel:01268778988" class="hover:text-[#c9a84c]">01268 778988</a></li><li><a href="tel:07949688866" class="hover:text-[#c9a84c]">07949 688866</a></li></ul><div class="mt-6 flex items-center gap-3"><a href="https://www.instagram.com/rayleighnailspa/?hl=en" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center bg-[#E1306C] text-white transition-transform hover:scale-105" aria-label="Instagram"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition-transform hover:scale-105" aria-label="Facebook"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div></div>
+    <div class="mx-auto mt-12 max-w-7xl border-t border-[#222222] px-6 pt-8 text-center text-sm text-[#c9a84c]/60 lg:px-8"><p>© 2026 Rayleigh Nails Spa. All rights reserved.</p></div>
   </footer>
 
+  <!-- Floating Sticky Action Links -->
   <div class="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
-    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-[#c9a84c]">
-      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-    </a>
-   
-    <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram portfolio feed" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-[#c9a84c]">
-      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
-
-    <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook business profile" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-[#c9a84c] p-0.5">
-      <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 14.991 22 12z"></path>
+    <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110">
+      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/>
       </svg>
     </a>
-  </div>
-
-  <div class="fixed inset-x-0 bottom-0 z-50 lg:hidden bg-[#0a0a0a]/95 backdrop-blur-md border-t border-[#222222] px-6 pt-3 pb-6">
-    <div class="mx-auto flex max-w-sm items-center justify-between gap-2">
-     
-      <a href="tel:01268778988" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c9a84c] text-[#c9a84c] transition active:bg-[#c9a84c]/10" aria-label="Call us">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.635-5.165-3.976-6.8-6.8l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/>
-        </svg>
-      </a>
-
-      <a href="https://wa.me/447949688866" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md transition active:opacity-90" aria-label="Contact us on WhatsApp">
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.843L.057 23.571a.5.5 0 00.611.611l5.729-1.466A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.877 9.877 0 01-5.031-1.378l-.36-.214-3.733.955.972-3.638-.235-.374A9.859 9.859 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118S21.882 6.533 21.882 12 17.467 21.882 12 21.882z"/></svg>
-        </svg>
-      </a>
-
-      <a href="https://www.instagram.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-md transition active:opacity-90" aria-label="Instagram">
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
-      </a>
-
-      <a href="https://www.facebook.com/rayleighnailsspa" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-md transition active:opacity-90 p-0.5" aria-label="Follow us on Facebook">
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 14.991 22 12z"></path>
-        </svg>
-      </a>
-
-    </div>
+    <a href="https://www.instagram.com/rayleighnailspa/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram portfolio feed" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#E1306C] text-white shadow-lg transition-transform hover:scale-110">
+      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
   </div>
 
   <script src="js/main.js"></script>
