@@ -293,3 +293,191 @@ h1, h2, h3, h4, h5, h6 {
 .btn--outline:hover p {
   color: #0a0a0a !important;
 }
+
+/* index.html - homepage starfield animation and lightbox styles */
+/* Floating Stars Animation - Smooth & Organic */
+@keyframes floatStar {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  25% { transform: translate(15px, -25px) scale(1.3); opacity: 0.9; }
+  50% { transform: translate(-10px, 30px) scale(0.8); opacity: 0.5; }
+  75% { transform: translate(20px, -15px) scale(1.6); opacity: 1; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+}
+
+@keyframes floatStarSlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+  33% { transform: translate(-20px, 20px) scale(1.4); opacity: 0.8; }
+  66% { transform: translate(15px, -30px) scale(0.7); opacity: 0.4; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px 2px rgba(201, 168, 76, 0.15); }
+  50% { box-shadow: 0 0 20px 8px rgba(201, 168, 76, 0.35); }
+}
+
+.star-float-1 { animation: floatStar 8s infinite ease-in-out; }
+.star-float-2 { animation: floatStar 11s infinite ease-in-out reverse; }
+.star-float-3 { animation: floatStarSlow 14s infinite ease-in-out; }
+.star-float-4 { animation: floatStarSlow 9s infinite ease-in-out reverse; }
+.star-float-5 { animation: floatStar 12s infinite ease-in-out; }
+.star-glow { animation: glowPulse 3s infinite ease-in-out; }
+.star-glow-delay { animation: glowPulse 4s infinite ease-in-out 1s; }
+.star-glow-slow { animation: glowPulse 5s infinite ease-in-out 2s; }
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 2px solid #c9a84c;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.lightbox-overlay .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #c9a84c;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background: none;
+  border: none;
+  z-index: 10000;
+}
+
+.lightbox-overlay .close-btn:hover {
+  transform: scale(1.2);
+}
+
+.gallery-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+
+/* gallery.html - gallery page animations, mobile layout, and swipe indicators */
+/* Mobile: Larger images & smaller buttons */
+@keyframes slideFromRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-right { animation: slideFromRight 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+.animate-slide-left { animation: slideFromLeft 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+
+/* Mobile: Larger images & smaller buttons */
+@media (max-width: 640px) {
+  #gallery-container .w-12,
+  #ideas-container .w-12 {
+    width: 1.5rem !important;
+    min-width: 1.5rem !important;
+  }
+
+  #gallery-container .md\:w-16,
+  #ideas-container .md\:w-16 {
+    width: 1.5rem !important;
+    min-width: 1.5rem !important;
+  }
+
+  #gallery-container .gap-4,
+  #ideas-container .gap-4 {
+    gap: 0.5rem !important;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1/1 !important;
+  }
+}
+
+/* Touch swipe indicators */
+.swipe-indicator {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .swipe-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #c9a84c;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-top: 8px;
+  }
+
+  .swipe-indicator svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* price-list.html - price list page table styling */
+.price-table,
+.price-table__row {
+  background-color: #0a0a0a !important;
+}
+
+.category-title {
+  color: #c9a84c !important;
+}
+
+.price-table__row span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.price-table {
+  border-bottom: 1px solid rgba(255, 255, 255, 1) !important;
+}
+
+/* services/pedicure.html - pedicure carousel styles */
+.carousel-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-media.active {
+  opacity: 1;
+}
+
+.carousel-media img,
+.carousel-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
