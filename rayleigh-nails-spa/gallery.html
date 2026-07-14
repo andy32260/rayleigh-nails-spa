@@ -10,6 +10,107 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    @keyframes slideFromRight {
+      from { transform: translateX(30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideFromLeft {
+      from { transform: translateX(-30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-right { animation: slideFromRight 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+    .animate-slide-left { animation: slideFromLeft 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+
+    /* Mobile: Larger images & smaller buttons */
+    @media (max-width: 640px) {
+      #gallery-container .w-12,
+      #ideas-container .w-12 {
+        width: 1.5rem !important;
+        min-width: 1.5rem !important;
+      }
+      #gallery-container .md\:w-16,
+      #ideas-container .md\:w-16 {
+        width: 1.5rem !important;
+        min-width: 1.5rem !important;
+      }
+      #gallery-container .gap-4,
+      #ideas-container .gap-4 {
+        gap: 0.5rem !important;
+      }
+      .aspect-square {
+        aspect-ratio: 1/1 !important;
+      }
+    }
+
+    /* Lightbox Styles */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .lightbox-overlay.active {
+      display: flex;
+    }
+    .lightbox-overlay img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border: 2px solid #c9a84c;
+      border-radius: 4px;
+      cursor: default;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #c9a84c;
+      cursor: pointer;
+      transition: transform 0.3s;
+      background: none;
+      border: none;
+      z-index: 10000;
+    }
+    .lightbox-overlay .close-btn:hover {
+      transform: scale(1.2);
+    }
+    .gallery-image {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-image:hover {
+      transform: scale(1.02);
+    }
+
+    /* Touch swipe indicators */
+    .swipe-indicator {
+      display: none;
+    }
+    @media (max-width: 640px) {
+      .swipe-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        color: #c9a84c;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.6;
+        margin-top: 8px;
+      }
+      .swipe-indicator svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#ffffff] font-light leading-relaxed antialiased" style="background-color: #0a0a0a !important; color: #ffffff !important;">
 
@@ -211,7 +312,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: NAIL DESIGN IDEAS - IDENTICAL TO OUR WORK -->
+    <!-- SECTION 2: NAIL DESIGN IDEAS - 5 PAGES -->
     <section class="border-t border-[#222222]/40 bg-[#0a0a0a] pt-12 pb-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         
@@ -278,6 +379,72 @@
               </div>
             </div>
 
+            <!-- Ideas Page 3 -->
+            <div data-ideas-page class="hidden grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-3 lg:gap-6">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea12.png" alt="Nail Design Idea 13" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea12.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea13.png" alt="Nail Design Idea 14" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea13.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea14.png" alt="Nail Design Idea 15" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea14.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea15.png" alt="Nail Design Idea 16" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea15.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea16.png" alt="Nail Design Idea 17" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea16.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea17.png" alt="Nail Design Idea 18" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea17.png">
+              </div>
+            </div>
+
+            <!-- Ideas Page 4 -->
+            <div data-ideas-page class="hidden grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-3 lg:gap-6">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea18.png" alt="Nail Design Idea 19" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea18.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea20.png" alt="Nail Design Idea 20" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea20.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea21.png" alt="Nail Design Idea 21" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea21.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea22.png" alt="Nail Design Idea 22" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea22.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea23.png" alt="Nail Design Idea 23" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea23.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea24.png" alt="Nail Design Idea 24" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea24.png">
+              </div>
+            </div>
+
+            <!-- Ideas Page 5 -->
+            <div data-ideas-page class="hidden grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-3 lg:gap-6">
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea25.png" alt="Nail Design Idea 25" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea25.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea26.png" alt="Nail Design Idea 26" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea26.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea27.png" alt="Nail Design Idea 27" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea27.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea28.png" alt="Nail Design Idea 28" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea28.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea29.png" alt="Nail Design Idea 29" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea29.png">
+              </div>
+              <div class="w-full aspect-square overflow-hidden border border-[#222222]">
+                <img src="images/gallery-images/nail-idea30.png" alt="Nail Design Idea 30" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 gallery-image" data-full="images/gallery-images/nail-idea30.png">
+              </div>
+            </div>
+
           </div>
 
           <!-- Stretched Right Control Button without text -->
@@ -292,7 +459,7 @@
         <div class="mt-6 flex justify-center gap-4 text-sm font-medium tracking-widest text-[#c9a84c] uppercase">
           <span id="ideas-current">1</span>
           <span class="text-zinc-600 font-normal">/</span>
-          <span id="ideas-total">2</span>
+          <span id="ideas-total">5</span>
         </div>
 
         <!-- Swipe Indicator (Mobile only) -->
