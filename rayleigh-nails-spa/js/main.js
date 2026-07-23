@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initHeaderScroll();
   initReviewCarousel();
-  initHomepageLightbox();
+  initLightbox();
   initGalleryPageInteractions();
   initPedicureCarousel();
 });
@@ -66,24 +66,6 @@ function initReviewCarousel() {
   const track = document.querySelector('[data-review-track]');
   const prevBtn = document.querySelector('[data-review-prev]');
   const nextBtn = document.querySelector('[data-review-next]');
-
-  if (!track || !prevBtn || !nextBtn) return;
-
-  const scrollAmount = () => track.querySelector('.review-card')?.offsetWidth + 24 || 320;
-
-  prevBtn.addEventListener('click', () => {
-    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-  });
-}
-
-function initReviewCarousel() {
-  const track = document.querySelector('[data-review-track]');
-  const prevBtn = document.querySelector('[data-review-prev]');
-  const nextBtn = document.querySelector('[data-review-next]');
   const counter = document.querySelector('[data-review-counter]');
 
   if (!track || !prevBtn || !nextBtn) return;
@@ -106,65 +88,6 @@ function initReviewCarousel() {
     updateReview();
   });
 }
-
-// Gallery Pagination Logic
-document.addEventListener('DOMContentLoaded', () => {
-  const pages = document.querySelectorAll('[data-gallery-page]');
-  const prevBtn = document.getElementById('gallery-prev');
-  const nextBtn = document.getElementById('gallery-next');
-  const counter = document.getElementById('gallery-counter');
-  
-  // If these elements don't exist on the current page (like index.html), exit safely
-  if (!pages.length || !prevBtn || !nextBtn || !counter) return;
-
-  let currentPage = 0;
-  const totalPages = pages.length;
-
-  function updateGallery() {
-    // Hide all pages, show only the active page
-    pages.forEach((page, index) => {
-      if (index === currentPage) {
-        page.classList.remove('hidden');
-      } else {
-        page.classList.add('hidden');
-      }
-    });
-
-    // Update indicator text
-    counter.textContent = `Page ${currentPage + 1} / ${totalPages}`;
-
-    // Handle disabled button appearances/states
-    prevBtn.disabled = currentPage === 0;
-    nextBtn.disabled = currentPage === totalPages - 1;
-  }
-
-  prevBtn.addEventListener('click', () => {
-    if (currentPage > 0) {
-      currentPage--;
-      updateGallery();
-      // Smoothly scroll back to the top of the gallery grid container
-      document.getElementById('gallery-container').scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'nearest' 
-      });
-    }
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (currentPage < totalPages - 1) {
-      currentPage++;
-      updateGallery();
-      // Smoothly scroll back to the top of the gallery grid container
-      document.getElementById('gallery-container').scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'nearest' 
-      });
-    }
-  });
-
-  // Run immediately on page load to set correct initial states
-  updateGallery();
-});
 
 // Pagination handler helper factory function
 function initGalleryPagination(config) {
@@ -239,14 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// index.html - homepage lightbox functionality
-/* LIGHTBOX FUNCTIONALITY */
-function initHomepageLightbox() {
+function initLightbox() {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxClose = document.getElementById('lightbox-close');
 
   if (!lightbox || !lightboxImg || !lightboxClose) return;
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    lightboxImg.setAttribute('src', '');
+  };
 
   document.querySelectorAll('.gallery-image').forEach((img) => {
     img.addEventListener('click', (e) => {
@@ -259,12 +186,6 @@ function initHomepageLightbox() {
       }
     });
   });
-
-  const closeLightbox = () => {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-    lightboxImg.setAttribute('src', '');
-  };
 
   lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (e) => {
@@ -280,47 +201,8 @@ function initHomepageLightbox() {
   });
 }
 
-// gallery.html - gallery swipe, keyboard navigation, and lightbox support
-/* LIGHTBOX FUNCTIONALITY */
-/* SWIPE NAVIGATION (MOBILE) */
+// gallery.html - gallery swipe and keyboard navigation support
 function initGalleryPageInteractions() {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.getElementById('lightbox-close');
-
-  if (lightbox && lightboxImg && lightboxClose) {
-    document.querySelectorAll('.gallery-image').forEach((img) => {
-      img.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const src = img.getAttribute('data-full') || img.getAttribute('src');
-        if (src) {
-          lightboxImg.setAttribute('src', src);
-          lightbox.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        }
-      });
-    });
-
-    const closeLightbox = () => {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-      lightboxImg.setAttribute('src', '');
-    };
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
-  }
-
   const galleryViewport = document.getElementById('gallery-content-viewport');
   const ideasViewport = document.getElementById('ideas-content-viewport');
 

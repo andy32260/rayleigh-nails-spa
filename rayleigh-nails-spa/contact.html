@@ -10,6 +10,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=300;400;500&family=Inter:wght=300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .contact-detail:last-of-type {
+      border-bottom: none;
+    }
+    .contact-icon {
+      min-width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 50%;
+      color: #c9a84c;
+    }
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+    .contact-divider {
+      height: 1px;
+      background-color: rgba(201, 168, 76, 0.3);
+      margin: 0.25rem 0;
+    }
+  </style>
 </head>
 <body class="font-light leading-relaxed antialiased bg-[#0a0a0a] text-[#ffffff]" style="background-color: #0a0a0a !important; color: #ffffff !important;">
 
@@ -53,100 +83,109 @@
   </nav>
 
   <main id="main">
-    <section class="page-hero flex min-h-[50vh] items-center justify-center pt-36 pb-12" style="background-color: #0a0a0a !important;">
-      <div class="mx-auto max-w-5xl px-6 text-center flex flex-col items-center justify-center gap-6" style="display: flex !important; flex-direction: column !important; align-items: center !important;">
+    
+    <!-- Hero Section -->
+    <section class="page-hero flex min-h-[30vh] items-center justify-center pt-28 pb-4" style="background-color: #0a0a0a !important;">
+      <div class="mx-auto max-w-5xl px-6 text-center flex flex-col items-center justify-center gap-4" style="display: flex !important; flex-direction: column !important; align-items: center !important;">
         <div class="inline-block pb-4 border-b-2 border-[#c9a84c]" style="border-bottom-color: #c9a84c !important;">
           <p class="section-heading text-3xl sm:text-4xl tracking-[0.5em] text-[#ffffff] uppercase font-light" style="color: #ffffff !important; margin: 0 !important; padding-right: -0.5em; font-family: 'Cormorant Garamond', serif !important;">
             Get In Touch
           </p>
         </div>
-        <h1 class="section-heading uppercase tracking-[0.18em] font-light leading-relaxed max-w-2xl text-sm sm:text-base opacity-90 mt-2" style="color: #c9a84c !important; margin: 0 !important;">
+        <h1 class="section-heading uppercase tracking-[0.18em] font-light leading-relaxed max-w-2xl text-sm sm:text-base opacity-90 mt-1" style="color: #c9a84c !important; margin: 0 !important;">
           Book an appointment or ask us anything - we're always happy to help.
         </h1>
       </div>
     </section>
 
-    <section class="py-20 bg-[#0a0a0a]" style="background-color: #0a0a0a !important;">
-      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
+    <!-- Visit Us Section -->
+    <section class="py-8 bg-[#0a0a0a]" style="background-color: #0a0a0a !important;">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
         
-        <div class="p-8 rounded-lg bg-[#111111] border border-[#222222]/60 shadow-xl flex flex-col justify-between">
-          <div>
-            <div class="gold-line mb-6 h-[2px] w-12 bg-[#c9a84c]"></div>
-            <h2 class="section-heading mb-8 text-2xl font-light tracking-widest text-[#ffffff] uppercase" style="font-family: 'Cormorant Garamond', serif !important;">Visit Us</h2>
+        <div class="bg-[#111111] border border-[#222222]/60 rounded-lg shadow-xl overflow-hidden max-w-4xl mx-auto">
+          
+          <!-- Header -->
+          <div class="pt-6 pb-0 px-8 md:px-10">
+            <h2 class="section-heading text-center text-3xl font-light tracking-widest text-[#ffffff] uppercase" style="font-family: 'Cormorant Garamond', serif !important;">Visit Us</h2>
+          </div>
+
+          <!-- Content -->
+          <div class="p-8 md:p-10">
             
-            <address class="space-y-6 not-italic text-[#c9a84c]/90">
-              <div class="border-b border-[#222222] pb-4">
-                <span class="mb-1 block text-xs tracking-widest text-[#c9a84c] uppercase font-medium">Address</span>
-                <p class="text-[#ffffff]">109 High Street<br>Rayleigh, Essex<br>SS6 7QA</p>
+            <!-- Telephone -->
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.635-5.165-3.976-6.8-6.8l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/></svg>
               </div>
-              
-              <div class="border-b border-[#222222] pb-4">
-                <span class="mb-1 block text-xs tracking-widest text-[#c9a84c] uppercase font-medium">Telephone</span>
-                <a href="tel:01268778988" class="text-[#c9a84c] text-lg font-normal transition-colors hover:text-[#ffffff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">01268 778988</a>
+              <div>
+                <p class="text-xs tracking-widest text-[#c9a84c] uppercase font-medium mb-1">Telephone</p>
+                <a href="tel:01268778988" class="text-[#c9a84c] text-lg font-normal transition-colors hover:text-[#ffffff]">01268 778988</a>
               </div>
-              
-              <div class="border-b border-[#222222] pb-4">
-                <span class="mb-1 block text-xs tracking-widest text-[#c9a84c] uppercase font-medium">Mobile</span>
-                <a href="tel:07949688866" class="text-[#c9a84c] text-lg font-normal transition-colors hover:text-[#ffffff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">07949 688866</a>
-              </div>
-              
-              <div class="pb-2">
-                <span class="mb-1 block text-xs tracking-widest text-[#c9a84c] uppercase font-medium">Opening Hours</span>
-                <p class="text-[#ffffff]">Monday – Saturday: 9:30am – 7pm<br>Sunday: Closed</p>
-              </div>
-            </address>
-          </div>
+            </div>
 
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="tel:07949688866" class="bg-[#c9a84c] text-[#0a0a0a] text-center text-xs tracking-widest uppercase font-medium py-3.5 px-6 block transition hover:bg-[#b0903b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">Call Now</a>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=109+High+Street+Rayleigh+SS6+7QA" target="_blank" rel="noopener noreferrer" class="text-center text-xs tracking-widest uppercase font-medium py-3.5 px-6 block border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a0a0a] transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">Get Directions</a>
-          </div>
-        </div>
 
-        <div class="bg-[#111111] border border-[#222222]/60 p-8 rounded-lg shadow-xl">
-          <h2 class="section-heading mb-6 text-2xl font-light tracking-widest text-[#ffffff] uppercase" style="font-family: 'Cormorant Garamond', serif !important;">Send a Message</h2>
-          <form action="#" method="post" class="flex flex-col gap-6">
-            <div>
-              <label for="name" class="mb-2 block text-xs tracking-widest text-[#c9a84c] uppercase">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="name" 
-                     class="w-full px-4 py-3 bg-[#0a0a0a] text-white border border-[#c9a84c]/30 rounded focus:border-[#c9a84c] focus:outline-none focus:ring-1 focus:ring-[#c9a84c]">
+<!-- Divider -->
+<div class="h-px w-full bg-[#c9a84c]/30 my-3"></div>
+
+            <!-- Mobile -->
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 0V3h3"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-widest text-[#c9a84c] uppercase font-medium mb-1">Mobile</p>
+                <a href="tel:07949688866" class="text-[#c9a84c] text-lg font-normal transition-colors hover:text-[#ffffff]">07949 688866</a>
+              </div>
             </div>
-            <div>
-              <label for="phone" class="mb-2 block text-xs tracking-widest text-[#c9a84c] uppercase">Phone</label>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel" 
-                     class="w-full px-4 py-3 bg-[#0a0a0a] text-white border border-[#c9a84c]/30 rounded focus:border-[#c9a84c] focus:outline-none focus:ring-1 focus:ring-[#c9a84c]">
+
+            <!-- Divider -->
+
+<div class="h-px w-full bg-[#c9a84c]/30 my-3"></div>
+
+            <!-- Address -->
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-widest text-[#c9a84c] uppercase font-medium mb-1">Address</p>
+                <p class="text-[#ffffff] text-lg">109 High Street<br>Rayleigh, Essex<br>SS6 7QA</p>
+              </div>
             </div>
-            <div>
-              <label for="email" class="mb-2 block text-xs tracking-widest text-[#c9a84c] uppercase">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" 
-                     class="w-full px-4 py-3 bg-[#0a0a0a] text-white border border-[#c9a84c]/30 rounded focus:border-[#c9a84c] focus:outline-none focus:ring-1 focus:ring-[#c9a84c]">
+
+            <!-- Divider -->
+<!-- Divider -->
+<div class="h-px w-full bg-[#c9a84c]/30 my-3"></div>
+
+            <!-- Opening Hours -->
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-widest text-[#c9a84c] uppercase font-medium mb-1">Opening Hours</p>
+                <p class="text-[#ffffff] text-lg">Monday – Saturday: 9:30am – 7pm</p>
+                <p class="text-[#c9a84c]/70">Sunday: Closed</p>
+              </div>
             </div>
-            <div>
-              <label for="service" class="mb-2 block text-xs tracking-widest text-[#c9a84c] uppercase">Service</label>
-              <select id="service" name="service" 
-                      class="w-full px-4 py-3 bg-[#0a0a0a] text-white border border-[#c9a84c]/30 rounded focus:border-[#c9a84c] focus:outline-none focus:ring-1 focus:ring-[#c9a84c]">
-                <option value="" class="bg-[#0a0a0a]">Select a treatment</option>
-                <option value="nail" class="bg-[#0a0a0a]">Nail</option>
-                <option value="pedicure" class="bg-[#0a0a0a]">Pedicure & Manicure</option>
-                <option value="facial" class="bg-[#0a0a0a]">Facial</option>
-                <option value="eye" class="bg-[#0a0a0a]">Eye Treatment</option>
-                <option value="semi-permanent" class="bg-[#0a0a0a]">Semi Permanent Make-up</option>
-                <option value="massage" class="bg-[#0a0a0a]">Massage</option>
-                <option value="waxing" class="bg-[#0a0a0a]">Waxing</option>
-              </select>
+
+            <!-- Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:07949688866" class="bg-[#c9a84c] text-[#0a0a0a] text-center text-xs tracking-widest uppercase font-medium py-4 px-10 rounded-sm transition hover:bg-[#b0903b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+                Call Now
+              </a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=109+High+Street+Rayleigh+SS6+7QA" target="_blank" rel="noopener noreferrer" class="text-center text-xs tracking-widest uppercase font-medium py-4 px-10 rounded-sm border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a0a0a] transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">
+                Get Directions
+              </a>
             </div>
-            <div>
-              <label for="message" class="mb-2 block text-xs tracking-widest text-[#c9a84c] uppercase">Message</label>
-              <textarea id="message" name="message" rows="4" 
-                        class="w-full px-4 py-3 bg-[#0a0a0a] text-white border border-[#c9a84c]/30 rounded focus:border-[#c9a84c] focus:outline-none focus:ring-1 focus:ring-[#c9a84c] resize-none"></textarea>
-            </div>
-            <button type="submit" class="w-full mt-2 cursor-pointer bg-[#c9a84c] text-[#0a0a0a] py-3.5 px-6 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:bg-[#b0903b] hover:tracking-[0.25em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a84c]">Send Enquiry</button>
-          </form>
+
+          </div>
         </div>
 
       </div>
     </section>
 
+    <!-- How to Find Us Section -->
     <section class="border-t border-[#222222] bg-[#0a0a0a] py-20" style="background-color: #0a0a0a !important;">
       <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8 items-center">
         
