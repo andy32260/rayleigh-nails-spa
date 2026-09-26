@@ -6,7 +6,7 @@ A 13-page responsive website built for a real, live local nail salon business, f
 
 ## About
 
-This was freelance client work for Rayleigh Nails Spa, a registered UK business (Companies House no. 08092789). I managed the full client relationship independently, translating real business needs into a working, real-world product used by paying customers.
+This was freelance client work for Rayleigh Nails Spa, a local business. I managed the full client relationship independently, translating real business needs into a working, real-world product used by paying customers.
 
 ## Built With
 
@@ -31,4 +31,4 @@ This was freelance client work for Rayleigh Nails Spa, a registered UK business 
 
 ## Notes
 
-This project was built with AI-assisted tooling (Cursor) as part of the development process, noted here transparently rather than presented as fully manual work.
+This project was built with AI-assisted tooling (Cursor) as part of the development process.
